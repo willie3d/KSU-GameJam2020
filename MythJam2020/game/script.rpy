@@ -85,7 +85,7 @@ label start:
     "UGG I can't seem to sleep.. again"
     "Maybe I should take a walk, and then hopefully, I might be able to sleep."
 
-    scene backyardNight
+    scene Kitsune_Home_Backyard
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images

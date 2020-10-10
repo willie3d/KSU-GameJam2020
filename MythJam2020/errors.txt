@@ -2,81 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 30: expected statement.
-    pronoun1 = "he"
-             ^
+File "game/script.rpy", line 88: end of line expected.
+    scene Kitsune_Home_Backyard.png
+                               ^
 
-File "game/script.rpy", line 31: expected statement.
-    pronoun2 = "him"
-             ^
-
-File "game/script.rpy", line 32: expected statement.
-    pronoun3 = "his"
-             ^
-
-File "game/script.rpy", line 33: expected statement.
-    pronoun4 = "his"
-             ^
-
-File "game/script.rpy", line 34: expected statement.
-    pronoun5 = "himself"
-             ^
-
-File "game/script.rpy", line 35: expected statement.
-    pronoun6 = "Sir"
-             ^
-
-File "game/script.rpy", line 37: expected statement.
-    pronoun1 = "she"
-             ^
-
-File "game/script.rpy", line 38: expected statement.
-    pronoun2 = "her"
-             ^
-
-File "game/script.rpy", line 39: expected statement.
-    pronoun3 = "her"
-             ^
-
-File "game/script.rpy", line 40: expected statement.
-    pronoun4 = "hers"
-             ^
-
-File "game/script.rpy", line 41: expected statement.
-    pronoun5 = "herself"
-             ^
-
-File "game/script.rpy", line 42: expected statement.
-    pronoun6 = "Miss"
-             ^
-
-File "game/script.rpy", line 44: expected statement.
-    pronoun1 = "they"
-             ^
-
-File "game/script.rpy", line 45: expected statement.
-    pronoun2 = "them"
-             ^
-
-File "game/script.rpy", line 46: expected statement.
-    pronoun3 = "their"
-             ^
-
-File "game/script.rpy", line 47: expected statement.
-    pronoun4 = "theirs"
-             ^
-
-File "game/script.rpy", line 48: expected statement.
-    pronoun5 = "themself"
-             ^
-
-File "game/script.rpy", line 49: expected statement.
-    pronoun6 = "Comrade"
-             ^
-
-File "game/script.rpy", line 93: end of line expected.
-    k "I think you need to get your eyes checked, " + pronoun6 +". T-There’s this good eye place over at-"
-                                                    ^
+File "game/script.rpy", line 126: end of line expected.
+    scene ProtagDormDay.png
+                       ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Oct 10 17:10:49 2020
+Sat Oct 10 18:53:15 2020
