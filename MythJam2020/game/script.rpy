@@ -133,11 +133,11 @@ label start:
             $ kFriendship++
             "Kimiko looks at you with a surprised look on her face, speechless."
             k "..."
-	        mc "Look. I just-"
-	        k "I’m sorry."
+            mc "Look. I just-"
+            k "I’m sorry."
             "Kimiko touches your forehead, rendering you unconscious"
-	        mc "Wh-"
-	        k "Shhhh-"
+            mc "Wh-"
+            k "Shhhh-"
         "But you were so cute with your ears and tail! Maybe a bit hot. Like H-O-T hot.":
             $ kRomance++
             "Kimiko looks at you with a surprised yet confused look, while blushing very slightly."

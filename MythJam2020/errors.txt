@@ -2,13 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 88: end of line expected.
-    scene Kitsune_Home_Backyard.png
-                               ^
+File "game/script.rpy", line 129: expected statement.
+    <<<<<<< Updated upstream
+                            ^
 
-File "game/script.rpy", line 126: end of line expected.
-    scene ProtagDormDay.png
-                       ^
+File "game/script.rpy", line 158: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 159: expected statement.
+    >>>>>>> Stashed changes
+                           ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Oct 10 18:53:15 2020
+Sat Oct 10 19:11:42 2020
