@@ -2,17 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 129: expected statement.
-    <<<<<<< Updated upstream
-                            ^
+File "game/script.rpy", line 133: invalid syntax
+    kFriendship++
 
-File "game/script.rpy", line 158: expected statement.
-    =======
-          ^
 
-File "game/script.rpy", line 159: expected statement.
-    >>>>>>> Stashed changes
-                           ^
+File "game/script.rpy", line 142: invalid syntax
+    kRomance++
+
+
+File "game/script.rpy", line 152: invalid syntax
+    kHatred++
+
 
 Ren'Py Version: Ren'Py 7.3.5.606
 Sat Oct 10 19:46:48 2020
