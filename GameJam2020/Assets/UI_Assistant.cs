@@ -14,5 +14,6 @@ public class UI_Assistant : MonoBehaviour
     private void Start()
     {
         messageText.text = "hello citizens";
+        textWriter.AddWriter(messageText, "hello world", 1f);
     }
 }
