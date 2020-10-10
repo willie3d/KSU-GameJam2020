@@ -45,7 +45,7 @@ label start:
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
-    show kimikoFox
+    show kimiko fox
 
     #This waits for sometime
     pause 2
@@ -53,7 +53,7 @@ label start:
     "UMMM Did I see that correctly Kimiko just looked like a… fox?"
     mc "UMMMM..."
 
-    show kimiko
+    show kimiko happy
 
     mc "Oh MY GOD! You're a fox!"
 
