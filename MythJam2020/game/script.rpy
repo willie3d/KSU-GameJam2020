@@ -126,20 +126,19 @@ label start:
 
     k "Let go of me. I told you. I am not a fox. You probably just saw the shadows or something."
 
-<<<<<<< Updated upstream
     menu:
 
         "Look. If you are a fox, I’m not going to judge. Honestly you don’t have to tell me the truth if you don't want to.":
-            $ kFriendship++
+            $ kFriendship += 1
             "Kimiko looks at you with a surprised look on her face, speechless."
             k "..."
-	        mc "Look. I just-"
-	        k "I’m sorry."
+            mc ""
+            k ""
             "Kimiko touches your forehead, rendering you unconscious"
-	        mc "Wh-"
-	        k "Shhhh-"
+            mc "Wh"
+            k "Shhhh"
         "But you were so cute with your ears and tail! Maybe a bit hot. Like H-O-T hot.":
-            $ kRomance++
+            $ kRomance += 1
             "Kimiko looks at you with a surprised yet confused look, while blushing very slightly."
             k "W-Wh-What..?"
             mc "I think you’re cute."
@@ -149,15 +148,13 @@ label start:
             mc "What was that-"
             "You pass out."
         "I’m not stupid. Maybe you should stop doubting me, fox girl. Maybe you’re the one that’s stupid.":
-            $ kHatred++
+            $ kHatred += 1
             k "You don’t even know me. Back off."
             ""
 
 
     #insert fade to black
-=======
->>>>>>> Stashed changes
 
 
-    # This ends the game.
-    return
+
+    call start2 from script2

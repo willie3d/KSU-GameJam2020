@@ -1,22 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 33, in script
-    e "You've created a new Ren'Py game."
-Exception: Sayer 'e' is not defined.
+  File "game/script.rpy", line 132, in script
+    $ kFriendship += 1
+  File "game/script.rpy", line 132, in <module>
+    $ kFriendship += 1
+NameError: name 'kFriendship' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 33, in script
-    e "You've created a new Ren'Py game."
-  File "D:\Downloads\renpy-7.3.5-sdk\renpy\ast.py", line 678, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "D:\Downloads\renpy-7.3.5-sdk\renpy\ast.py", line 576, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
-Exception: Sayer 'e' is not defined.
+  File "game/script.rpy", line 132, in script
+    $ kFriendship += 1
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script.rpy", line 132, in <module>
+    $ kFriendship += 1
+NameError: name 'kFriendship' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 MythJam2020 1.0
-Sat Oct 10 14:20:46 2020
+Sat Oct 10 19:15:51 2020
