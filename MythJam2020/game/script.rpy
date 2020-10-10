@@ -13,18 +13,18 @@ define r = Character("Reiki Omoi")
 define hm = Character("Headmaster")
 define prof = Character("Prof. Hayato")
 define unknown = Character("??????")
-$ kFriendship = 0
-$ kRomance = 0
-$ kHatred = 0
-$ tFriendship = 0
-$ tRomance = 0
-$ tHatred = 0
-$ hFriendship = 0
-$ hRomance = 0
-$ hHatred = 0
-$ rFriendship = 0
-$ rRomance = 0
-$ rHatred = 0
+define k_friendship = 0
+define k_romance = 0
+define k_hatred = 0
+define t_friendship = 0
+define t_romance = 0
+define t_hatred = 0
+define h_friendship = 0
+define h_romance = 0
+define h_hatred = 0
+define r_friendship = 0
+define r_romance = 0
+define r_hatred = 0
 $ pronoun1 = ("") # he, she, they
 $ pronoun2 = ("") # him, her, them
 $ pronoun3 = ("") # his, her, their
@@ -126,11 +126,11 @@ label start:
 
     k "Let go of me. I told you. I am not a fox. You probably just saw the shadows or something."
 
-<<<<<<< Updated upstream
+
     menu:
 
         "Look. If you are a fox, I’m not going to judge. Honestly you don’t have to tell me the truth if you don't want to.":
-            $ kFriendship++
+            $ k_friendship += 1
             "Kimiko looks at you with a surprised look on her face, speechless."
             k "..."
             mc "Look. I just-"
@@ -139,7 +139,7 @@ label start:
             mc "Wh-"
             k "Shhhh-"
         "But you were so cute with your ears and tail! Maybe a bit hot. Like H-O-T hot.":
-            $ kRomance++
+            $ k_romance += 1
             "Kimiko looks at you with a surprised yet confused look, while blushing very slightly."
             k "W-Wh-What..?"
             mc "I think you’re cute."
@@ -149,46 +149,11 @@ label start:
             mc "What was that-"
             "You pass out."
         "I’m not stupid. Maybe you should stop doubting me, fox girl. Maybe you’re the one that’s stupid.":
-            $ kHatred++
+            $ k_hatred += 1
             k "You don’t even know me. Back off."
             ""
 
 
     #insert fade to black
-=======
->>>>>>> Stashed changes
 
-
-    # This ends the game.
-
-    scene black
-    "(MC eyes are closed when they hear an alarm go off. The screen slowly fills with light, and we are greeted by the MC’s Bedroom.)"
-
-    scene ProtagDormDay
-
-    "It's been a while since I've slept this well. I'm excited to start my first day of class."
-
-    "(As you greet the day, you get out of bed and get ready for your first day.)"
-
-    scene commonspace
-
-    "As you leave your dorm room, you are greeted by Reiki standing in the kitchen making breakfast. You head towards him and open the Fridge to see what a human might be able to eat around here."
-
-    show reiki
-
-    r "So, as it turns out, I guess it looks like we’re dorm mates."
-
-    "(Reiki sighs and shrugs his shoulders.)"
-
-    mc "Oh yeah, I kinda registered last minute, so fortunately, they put me in the same dorm as my friend, Kimiko."
-
-    r "You know Kimiko too. She was the person who convinced me to try sharing a dorm with others instead of living completely alone like I usually do."
-
-    mc "Do you not like being with other people?"
-
-    r  "I don't really have a good experience with others, I guess that’s why I became a vengeful spirit to begin with."
-
-    "A… Vengeful spirit… Yikes."
-
-
-    return
+    call start2 from script2
