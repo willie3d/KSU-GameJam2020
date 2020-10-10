@@ -151,10 +151,23 @@ label start:
         "I’m not stupid. Maybe you should stop doubting me, fox girl. Maybe you’re the one that’s stupid.":
             $ k_hatred += 1
             k "You don’t even know me. Back off."
-            ""
+            "Kimiko shakes her arm violently to get you to let go and kicks you."
+            #insert shake
+            "BONK!"
+            #shake text
+            "You hit the ground with a big 'BONK!' to the head and are rendered unconscious from the blow to the head. "
+
+    #insert fade to black slowly
+    hide kimiko happy
+
+    #SCENE 2:
+    #########
 
 
-    #insert fade to black
+    #Insert creak sound
+    scene bedroomDay
+    "Wait, when did I get back to my bedroom? And what was that noise?"
+
 
 
     # This ends the game.
