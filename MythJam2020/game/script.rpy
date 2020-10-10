@@ -126,6 +126,7 @@ label start:
 
     k "Let go of me. I told you. I am not a fox. You probably just saw the shadows or something."
 
+<<<<<<< Updated upstream
     menu:
 
         "Look. If you are a fox, I’m not going to judge. Honestly you don’t have to tell me the truth if you don't want to.":
@@ -154,6 +155,8 @@ label start:
 
 
     #insert fade to black
+=======
+>>>>>>> Stashed changes
 
 
     # This ends the game.
