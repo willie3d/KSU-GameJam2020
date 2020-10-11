@@ -42,8 +42,8 @@ $ pronoun6 = ("") # Sir, Miss, Comrade
 label start2:
     hide kimiko happy
     scene black
-    "Day 2"
-
+    "Day 2 in the next update!!!"
+    return
     "(Your eyes are closed when they hear an alarm go off.)"
     #The screen slowly fills with light, and we are greeted by the MC’s Bedroom.)
     scene ProtagDormDay
@@ -414,7 +414,7 @@ label start2:
 
     "(You feel your panic rise as he brings up the word “human”. You quickly decide the best way to fix this situation is to fight your way out of it.)"
 
-    call battle2
+    call battle2 from _call_battle2
 
 
     return

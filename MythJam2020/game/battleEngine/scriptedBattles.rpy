@@ -4,8 +4,8 @@ label battle1:
     #   init_fighters initalizes fighter objects. Also resets their values. Do not use if fighters have
     #   dynamic stats linked to another stat system. TL;DR Do not use if fighter stats are fixed stats.
     #   init_skills and init_fighters probably only need to be called once.
-    call init_skills
-    call init_fighters
+    call init_skills from _call_init_skills
+    call init_fighters from _call_init_fighters
     #   Initialize fighters and parties.
     $ player = [player1]
     $ friends = []
@@ -37,8 +37,8 @@ label battle1:
 
 label battle2:
 
-    call init_skills
-    call init_fighters
+    call init_skills from _call_init_skills_1
+    call init_fighters from _call_init_fighters_1
     #   Initialize fighters and parties.
     $ player = [player1]
     $ friends = []

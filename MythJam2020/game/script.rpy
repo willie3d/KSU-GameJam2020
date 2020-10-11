@@ -638,7 +638,7 @@ label start:
     play music "../audio/Pokemon-RivalAppears.mp3"
     #fighting squence occurs
     window hide
-    call battle1
+    call battle1 from _call_battle1
     window show
 
     play music "../audio/School song.mp3"
