@@ -13,8 +13,8 @@ label init_fighters:
         MP = 1,
         ELEM = "Water",
         skill_set = [SmartAttack, CharismaAttack, FunAttack],
-        pic_card ="images/pipo-enemy031.png",
-        pic_sprite =  "blackSheep", #"images/pipo-enemy031.png",
+        pic_card ="images/empty.png",
+        pic_sprite =  "silhouette", #"images/pipo-enemy031.png",
         sprite_pos = [0.5, 0.5]
         )
 
@@ -29,7 +29,7 @@ label init_fighters:
         MP = 1,
         ELEM = "Water",
         skill_set = [GenericAttack],
-        pic_card ="images/pipo-enemy031.png",
+        pic_card ="images/empty.png",
         pic_sprite =  "blackSheep", #"images/pipo-enemy031.png",
         sprite_pos = [0.5, 0.5]
         )
@@ -44,7 +44,7 @@ label init_fighters:
         MP = 1,
         ELEM = "Water",
         skill_set = [GenericAttack],
-        pic_card ="images/pipo-enemy031.png",
+        pic_card ="images/empty.png",
         pic_sprite =  "blackSheep", #"images/pipo-enemy031.png",
         sprite_pos = [0.5, 0.5]
         )
