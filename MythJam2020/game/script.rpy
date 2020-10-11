@@ -598,7 +598,7 @@ label start:
             $r_romance=r_romance-1
     scene realschool
     stop music
-    play music "../audio/leavingschool.mp3"
+    play music "../audio/leavingschool.mp3  "
     "(At the end of your class, Kimiko grabs your hand and rushes you quickly out of the classroom. You find yourself back at the school's entrance and notice how you have arrived before any of the other students.)"
     "(Kimiko attempts to push you out of the gate when suddenly you're hit by an invisible force field and get thrown backwards. You look up at Kimiko questioning what just happened.)"
 
