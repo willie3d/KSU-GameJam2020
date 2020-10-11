@@ -2,9 +2,23 @@
 errors listed below, and try again.
 
 
-File "game/options.rpy", line 210: expected statement.
-    config.layers = ['master', 'transient', 'battle_sprites', 'screens',  'battle_anims', 'overlay' ]
-                  ^
+File "game/battleEngine/init_fighters.rpy", line 37: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation.
+    $ guard1 = fighter(
+    ^
+                FTR = "Guard 1",
+                ALIVE = True,
+                ATK = 100,
+                DEF = 10,
+                SPD = 420,
+                MG = 10,
+                HP = 15,
+                MP = 0,
+                ELEM = "Water",
+                skill_set = [GenericAttack],
+                pic_card ="images/pipo-enemy031.png",
+                pic_sprite =  "blackSheep", 
+                sprite_pos = [0.5, 0.5]
+                )
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Oct 11 02:17:48 2020
+Sun Oct 11 03:02:17 2020

@@ -1,4 +1,4 @@
-Sun Oct 11 02:43:25 2020
+Sun Oct 11 03:04:07 2020
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
  
@@ -7,16 +7,15 @@ Bootstrap to the start of init.init took 0.08s
 Early init took 0.01s
 Loader init took 0.02s
 Loading error handling took 0.04s
-Loading script took 0.34s
-Loading save slot metadata. took 0.03s
+Loading script took 0.30s
+Loading save slot metadata. took 0.04s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.14s
+Running init code took 0.12s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\wwwwi\\AppData\\Roaming/RenPy/backups\\MythJam2020':
-Dump and make backups. took 0.07s
+Dump and make backups. took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.02s
@@ -25,10 +24,10 @@ Creating interface object took 0.17s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.08s
-Prepare screens took 0.07s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.08s
 Running _start took 0.00s
@@ -292,35 +291,14 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 2.24000000954s
+Total time until interface ready: 2.06399989128s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.012000 seconds.
-- Frame drawn at 0.027000 seconds.
-- Frame drawn at 0.044000 seconds.
-- Frame drawn at 0.060000 seconds.
-- 0.060000 seconds to render 5 frames.
+- Frame drawn at 0.014000 seconds.
+- Frame drawn at 0.034000 seconds.
+- Frame drawn at 0.050000 seconds.
+- Frame drawn at 0.067000 seconds.
+- 0.067000 seconds to render 5 frames.
 
-Full traceback:
-  File "game/script.rpy", line 676, in script call
-    call start2 from script2
-  File "game/script2.rpy", line 417, in script call
-    call battle
-  File "game/battleEngine/test_battle.rpy", line 10, in script
-    $ player = [player1]
-  File "D:\Downloads\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\Downloads\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/battleEngine/test_battle.rpy", line 10, in <module>
-    $ player = [player1]
-NameError: name 'player1' is not defined
-
-While running game code:
-  File "game/script.rpy", line 676, in script call
-    call start2 from script2
-  File "game/script2.rpy", line 417, in script call
-    call battle
-  File "game/battleEngine/test_battle.rpy", line 10, in script
-    $ player = [player1]
-  File "game/battleEngine/test_batt
+primary display bounds: (0, 0, 1920, 1080)
+swap i
