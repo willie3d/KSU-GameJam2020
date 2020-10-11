@@ -5,37 +5,6 @@
 
 #  $ Symbol required to use base python functions
 
-define mc = Character("MC (replace with variable later)")
-define k = Character("Kimiko Inariou")
-define t = Character("Taiki Tangou")
-define h = Character("Himiko Amatera")
-define r = Character("Reiki Omoi")
-define hm = Character("Headmaster")
-define prof = Character("Prof. Hayato")
-define unknown = Character("??????")
-define rando= Character("Random Student")
-define strongman= Character("Strong Man")
-$ k_friendship = 0
-$ k_romance = 0
-$ k_hatred = 0
-$ t_friendship = 0
-$ t_romance = 0
-$ t_hatred = 0
-$ h_friendship = 0
-$ h_romance = 0
-$ h_hatred = 0
-$ r_friendship = 0
-$ r_romance = 0
-$ r_hatred = 0
-$ intel=0
-$ charisma=0
-$ fun=0
-$ pronoun1 = ("") # he, she, they
-$ pronoun2 = ("") # him, her, them
-$ pronoun3 = ("") # his, her, their
-$ pronoun4 = ("") # his, hers, theirs
-$ pronoun5 = ("") # himself, herself, themself
-$ pronoun6 = ("") # Sir, Miss, Comrade
 
 # The game starts here.
 
