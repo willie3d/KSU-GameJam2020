@@ -50,12 +50,27 @@ image tanuki disgusted=im.Scale("../images/char/Tanuki-Annoyed-Disgusted.png", 1
 image tanuki blush=im.Scale("../images/char/Tanuki-Blushing.png", 1150, 650)
 image tanuki sad=im.Scale("../images/char/Tanuki-Sad.png", 1150, 650)
 
+
+image himiko = im.Scale("../images/char/Himiko-Default.PNG", 1150, 650)
+image himiko angry=im.Scale("../images/char/Himiko-Angry.PNG", 1150, 650)
+image himiko smug=im.Scale("../images/char/Himiko-Smug.PNG", 1150, 650)
+image himiko blush=im.Scale("../images/char/Himiko-Blush.PNG", 1150, 650)
+image himiko sad=im.Scale("../images/char/Himiko-Sad.PNG", 1150, 650)
+image himiko happy=im.Scale("../images/char/Himiko-Happy.PNG", 1150, 650)
+
+image reiki = im.Scale("../images/char/Reiki-Default.png", 1150, 650)
+image reiki angry=im.Scale("../images/char/Reiki-Angry.png", 1150, 650)
+image reiki happy=im.Scale("../images/char/Reiki-Happy.png", 1150, 650)
+image reiki blush=im.Scale("../images/char/Reiki-Blushing.png", 1150, 650)
+image reiki sad=im.Scale("../images/char/Reiki-Sad.png", 1150, 650)
+
 $ pronoun1 = ("") # he, she, they
 $ pronoun2 = ("") # him, her, them
 $ pronoun3 = ("") # his, her, their
 $ pronoun4 = ("") # his, hers, theirs
 $ pronoun5 = ("") # himself, herself, themself
 $ pronoun6 = ("") # Sir, Miss, Comrade
+$ beauty = ("") #cool, cute, new
 
 # The game starts here.
 
@@ -74,6 +89,7 @@ label start:
             $ pronoun4 = "his"
             $ pronoun5 = "himself"
             $ pronoun6 = "Sir"
+            $ beauty = "cool"
             $ defaultName = "Geophery"
         "She, Her, Hers":
             $ pronoun1 = "she"
@@ -82,6 +98,7 @@ label start:
             $ pronoun4 = "hers"
             $ pronoun5 = "herself"
             $ pronoun6 = "Miss"
+            $ beauty = "cute"
             $ defaultName = "Bethany"
         "They, Them, Theirs":
             $ pronoun1 = "they"
@@ -90,6 +107,7 @@ label start:
             $ pronoun4 = "theirs"
             $ pronoun5 = "themself"
             $ pronoun6 = "Comrade"
+            $ beauty = "new"
             $ defaultName = "Komrade"
 
     # The phrase in the brackets is the text that the game will display to prompt
@@ -189,12 +207,18 @@ label start:
 
     #insert fade to black slowly
     hide kimiko happy
+    scene black
+    with fade
+    with dissolve
+
+
 
     #SCENE 2:
     #########
 
 
     #Insert creak sound
+    play sound "../audio/BESTDOOR.mp3"
 
     scene bedroomDay
     "Wait, when did I get back to my bedroom? And what was that noise?"
@@ -234,13 +258,13 @@ label start:
 
     "(Kimiko rummages in her backpack and pulls out a pair of cat ears and forces them under your hood onto your head. You look at her with a confused gaze and notice Kimiko’s friend walking towards you.)"
 
-    t "Hey, Kimiko, when were you going to introduce me to your [cute/cool] friend?"
+    t "Hey, Kimiko, when were you going to introduce me to your [beauty] friend?"
 
-    k "Oh, this is my Nekomata friend, [MC Name]."
+    k "Oh, this is my Nekomata friend, [player_name]."
 
     "Excuse me... A what now?"
 
-    t "Hi [MC Name], I’m Taiki, a Tanuki, if you couldn't tell by my ears. I've never seen you around before. When did you move here?"
+    t "Hi [player_name], I’m Taiki, a Tanuki, if you couldn't tell by my ears. I've never seen you around before. When did you move here?"
 
     mc  "Well ummm… you see I just moved here a couple days ago, and I had no idea I was going to be coming to this school till today."
 
@@ -253,8 +277,7 @@ label start:
             "(Taiki looks at you with a happy expression.)"
 
             t "Great. I can't wait to show you the amazing history this place has to offer."
-
-            "(The School Bell rings.)"
+            play sound "../audio/betterschoolbell.mp3"
 
             t  "Oh, that's my cue. I hope to talk to you later."
         "That sounds like fun. Why not. \"Sure I'd love going on a tour with you. You seem very knowledgeable.\"":
@@ -265,7 +288,7 @@ label start:
 
             t "The school has a lot of interesting history and several secret locations I can't wait to share with you."
 
-            "(The School Bell rings.)"
+            play sound "../audio/betterschoolbell.mp3"
 
             t "Oh, that's the bell. I guess I'll have to leave now.  I'm excited for our next conversation!"
         "But I’m so lazy! \"Ugg..Do I have to.\"":
@@ -273,18 +296,20 @@ label start:
             show tanuki angry at right
             "(Taiki looks at you with an angry expression.)"
 
+            play sound "../audio/betterschoolbell.mp3"
+
             t "Oh well. I'm not forcing you to do anything you don't want."
 
-            "(The School Bell rings.)"
-
             t  "Well, I'm gonna get out of your way. Bye."
+
     hide tanuki
 
     "(Kimiko quickly pulls you aside and looks at you with a puzzled look.)"
 
-    mc "What was that all about? I'm a Nekomata now? And your friend is a Tengu! Where is this? What's going on!"
+    mc "What was that all about? I'm a Nekomata now? And your friend is a Tanuki! Where is this? What's going on!"
 
-    k "I'm sorry I had to do some quick thinking before you got yourself hurt. This is the University of Amaterasu, a special school for all mythological beings. I have no idea how you were able to get in here, but we have to hurry and get you out before you're discovered. If they find out you're a human, they will kill you or steal your soul; both are not very good options."
+    k "I'm sorry I had to do some quick thinking before you got yourself hurt. This is the University of Amaterasu, a special school for all mythological beings. I have no idea how you were able to get in here, but we have to hurry and get you out before you're discovered."
+    k "If they find out you're a human, they will kill you or steal your soul; both are not very good options."
 
     mc "Wait! You still didn't explain anything. How does this place even exist!"
 
@@ -300,13 +325,21 @@ label start:
 
     "(Whispered) \"Damn it, just follow my lead. We will leave at the end of the day!\""
 
-    "(The professor leads you and Kimiko to the auditorium, where you notice students standing in *attention. Looking towards the stage, you see a beautiful lady standing at the podium looking down upon the students. Standing beside her, you notice what seems to be the Headmaster, who you can't see clearly as she stands in the darkness. As you stand in your place, the room begins to go quiet, and the students turn their attention towards the stage.)"
+    "(The professor leads you and Kimiko to the auditorium, where you notice students standing in *attention. Looking towards the stage, you see a beautiful lady standing at the podium looking down upon the students.)"
+    "(Standing beside her, you notice what seems to be the Headmaster, who you can't see clearly as she stands in the darkness. As you stand in your place, the room begins to go quiet, and the students turn their attention towards the stage.)"
 
     scene auditorium
 
-    h "Hello Everyone! My name is Himiko, and I am your class president. Welcome, freshman students, to the University of Amaterasu. The first university of its kind designed by my ancestors to introduce young mythological beings like yourselves to the human realm with classes from blending in to the human realm to taking a human soul."
+    hide kimiko
+    show himiko smug
 
-    h "The goal of this university is to prepare you all for your lives outside, whether you take the boring option of becoming one with humans or the far more interesting option of taking human souls as your play things. I hope you find this university to be everything you have ever wanted, and if you need anything, feel free to talk to me as I said before this university is my family legacy. Now head outside and register for your first semester classes!"
+    h "Hello Everyone! My name is Himiko, and I am your class president. Welcome, freshman students, to the University of Amaterasu."
+    h "The first university of its kind designed by my ancestors to introduce young mythological beings like yourselves to the human realm with classes from blending in to the human realm to taking a human soul."
+
+    h "The goal of this university is to prepare you all for your lives outside, whether you take the boring option of becoming one with humans or the far more interesting option of taking human souls as your play things."
+    h "I hope you find this university to be everything you have ever wanted, and if you need anything, feel free to talk to me as I said before this university is my family legacy. Now head outside and register for your first semester classes!"
+
+    play sound "../audio/applause.wav"
 
     "(The auditorium burst into applause as the speech ended, and the students started walking out one by one, lining up to register for their classes. You follow Kimiko towards a table labeled \"Mythical Animal Registration\".)"
 
@@ -318,6 +351,8 @@ label start:
     show reiki at right
 
     r "WHAT THE FUCK!"
+
+    show reiki angry at right
 
     mc "OMG I’m so sorry! I was too focused on the table. I wasn't looking where I was going."
 
@@ -331,6 +366,8 @@ label start:
 
             "(Reiki deeply sighs.)"
 
+            show reiki at right
+
             r "Please watch where you’re going next time. You’re glad it was me and not one of the others. Also, you didn’t BUMP into me. You PUSHED me, but I will let it slide this time."
 
             mc "Okay… But-"
@@ -342,6 +379,8 @@ label start:
         "You help Reiki up. \"I apologize. I didn’t mean to. Please take this as a token of my apology.\" You give Reiki a corgi keychain.":
             $r_romance=r_romance+1
             "(Reiki looks a bit surprised.)"
+
+            show reiki blush at right
 
             r "Oh- I actually… Really like these… H-How did you know?"
 
@@ -361,6 +400,8 @@ label start:
 
         "You cross your arms. \"I’m soooorry, princess.\"":
             $r_hatred=r_hatred+1
+
+            show reiki angry at right
 
             "(Reiki stands up and looks at you in complete anger and disgust.)"
 
@@ -388,7 +429,8 @@ label start:
 
     "(You follow Kimiko to the table you were walking towards before. While waiting in the line, Kimiko turns towards you.)"
 
-    k "(Whispered) Okay, when you get to the table, tell them you want to register for: Introduction to Magical Beasts, Magical Beast Transformations, Introduction to the Human Race, and Introduction to Magical Abilities. These should all be easy classes for you to hide the fact that you're not supposed to be here. But don't worry, I’ll be standing behind you if you mess up."
+    k "(Whispered) Okay, when you get to the table, tell them you want to register for: Introduction to Magical Beasts, Magical Beast Transformations, Introduction to the Human Race, and Introduction to Magical Abilities."
+    k "These should all be easy classes for you to hide the fact that you're not supposed to be here. But don't worry, I’ll be standing behind you if you mess up."
 
     "(As you move closer to the table, you try to remember the classes Kimiko told you to register for. Then, finally, you are at the front of the line.)"
 
@@ -400,7 +442,7 @@ label start:
             "(The person accepts your excuse and looks towards Kimiko.)"
             "[pronoun1] will register for Introduction to Magical Beasts, Magical Beast Transformations, Introduction to the Human Race, and Introduction to Magical Abilities."
             rando "Alright. And can we get your name?"
-            mc "[MC Name]"
+            mc "[player_name]"
             rando "All right you are registered. Here is the schedule. Have a good semester!"
         "I will register for Introduction to Magical Beasts, Magical Beast Transformations, Introduction to the Human Race, and Introduction to Magical Abilities":
             $intel=intel+1
@@ -411,7 +453,7 @@ label start:
 
             rando "Those are all very good classes. Now can we get your name?"
 
-            mc "[MC Name]"
+            mc "[player_name]"
 
             rando "All right you are registered. Here is the schedule. Have a Great Semester!"
 
@@ -427,7 +469,7 @@ label start:
 
             rando "Oh okay then, and does [pronoun1] know their name?"
 
-            mc "Oh yes my name is [MC Name]."
+            mc "Oh yes my name is [player_name]."
 
             rando "Seems like you do know how to answer questions... Alright you are registered. Here is the schedule."
     hide rando
@@ -435,7 +477,6 @@ label start:
 
     "(After registering for your classes, you stand to the side as you wait for Kimiko to finish her registration. While waiting, you notice a crowd start to gather in the center of the room and decide to move towards the crowd to see what's happening."
 
-    scene areanearsignuptable
     "As you get closer, you notice the lady from the stage earlier surrounded by students rushing to talk to her. As you attempt to get closer, one of her bodyguards walks toward you and pushes you to the floor. While getting back up you notice the woman walk towards you as she offers you her hand.)"
 
     call battle
@@ -457,13 +498,15 @@ label start:
 
     h "That's good. My name is Himiko. I'm a Sun Goddess and the daughter of the owner of the school."
 
-    mc "Hi, my name is [MC Name]"
+    mc "Hi, my name is [player_name]"
 
-    h "Hi [MC Name]. Now I should be going, is there anything you want so that we can keep this incident quiet."
+    h "Hi [player_name]. Now I should be going, is there anything you want so that we can keep this incident quiet."
 
     menu:
         "No, it's really okay. I don't need anything.":
             $h_friendship=h_friendship+1
+
+            show himiko happy at right
 
             "(Himiko looks at you with a happy expression.)"
 
@@ -472,6 +515,8 @@ label start:
             "(Himiko walks away, and you are left standing alone as the crowd follows her out.)"
         "Well, maybe you could show me around the school some time.":
             $h_romance=h_romance+1
+
+            show himiko blush at right
 
             "(Himiko looks at you with a slight blush.)"
 
@@ -482,6 +527,13 @@ label start:
 
         "You could give me some money, and I might just forget about all of this.":
             $h_hatred=h_hatred+1
+            show himiko angry at right
+
+            h "Oh well, Bob, I'll let you deal with this."
+
+            bob "Here is 10,000 yen. Don’t use it all at once."
+
+            "(Himiko walks away, and you are left standing alone with the money you just earned as the crowd follows Himiko out.)"
     hide himiko
     hide  bob
 
@@ -489,6 +541,7 @@ label start:
 
     "(As you make your way back towards the table where you left Kimiko, you notice a male student rushing towards you. Suddenly, he phases in front of you and attempts to push you backwards. As you catch your balance, you look towards your assailant.)"
 
+    scene areanearsignuptable
     show rando fightingboy
 
     rando "Who told you that you were allowed to talk to our Goddess Himiko!"
@@ -545,9 +598,13 @@ label start:
             $h_romance=h_romance-1
             $t_romance=t_romance-1
             $r_romance=r_romance-1
-    "(At the end of your class, Kimiko grabs your hand and rushes you quickly out of the classroom. You find yourself back at the school's entrance and notice how you have arrived before any of the other students. Kimiko attempts to push you out of the gate when suddenly you're hit by an invisible force field and get thrown backwards. You look up at Kimiko questioning what just happened.)"
-
     scene realschool
+    stop music
+    play music "../audio/leavingschool.mp3  "
+    "(At the end of your class, Kimiko grabs your hand and rushes you quickly out of the classroom. You find yourself back at the school's entrance and notice how you have arrived before any of the other students.)"
+    "(Kimiko attempts to push you out of the gate when suddenly you're hit by an invisible force field and get thrown backwards. You look up at Kimiko questioning what just happened.)"
+
+    show kimiko
 
     k "Oh no, oh no! I think you're stuck in here……."
 
@@ -587,6 +644,8 @@ label start:
             "(Kimiko grabs you by the ear and drags you along.)"
 
     scene office
+    stop music
+    play music "../audio/mixkit-classique-63.mp3"
 
     "(Kimiko escorts you to the housing office to hopefully find some on campus housing.)"
 
@@ -616,6 +675,7 @@ label start:
     "(Kimiko escorts you to the housing unit, and you take a short look around the common space before being escorted to your bedroom.)"
 
     scene protagdormday
+    show kimiko
 
     k "Alright. This is your room. I'll be heading out to go grab some of your belongings, and I'll inform your mom of the current situation."
 

@@ -96,7 +96,7 @@ Full traceback:
     raise IOError("Couldn't find file '%s'." % name)
 IOError: Couldn't find file 'sf_250-25.png'.
 
-Windows-8-6.2.9200
+Darwin-19.6.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
 MythJam2020 1.0
-Sun Oct 11 03:19:43 2020
+Sun Oct 11 04:04:19 2020
