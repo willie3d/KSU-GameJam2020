@@ -38,6 +38,7 @@ image auditorium= im.Scale("../images/bg/MonsterAuditorium.png", 1500, 750)
 image kitsunebackyard=im.Scale("../images/bg/KitsuneBackyard.png", 1750, 750)
 image signuptable=im.Scale("../images/bg/MonsterHallway.png", 1500, 750)
 image classroom=im.Scale("../images/bg/WelcomeClassroom.png", 1500, 750)
+image allcharlineup=im.Scale("../images/bg/WelcomeClassroom.png", 1500, 750)
 image dormcommonspace=im.Scale("../images/bg/CommonArea.png", 1500, 750)#smaller
 image protagdormday=im.Scale("../images/bg/ProtagDormDay.png", 1750, 750)
 image office=im.Scale("../images/bg/Monsterprincipal.png", 1750, 750)
@@ -603,22 +604,28 @@ label start:
     "Wow, that girl has a large fan club…"
     "Let me not incur the wrath of one of them."
 
-    "(As you make your way back towards the table where you left Kimiko, you notice a male student rushing towards you. Suddenly, he phases in front of you and attempts to push you backwards. As you catch your balance, you look towards your assailant.)"
+    "(As you make your way back towards the table where you left Kimiko, you notice a male student rushing towards you."
+    "Suddenly, he phases in front of you and attempts to push you backwards. As you catch your balance, you look towards your assailant.)"
 
     scene areanearsignuptable
     show randopickingfight
-
+    with hpunch
     rando "Who told you that you were allowed to talk to our Goddess Himiko!"
 
     mc "Um.. I don't know what you mean she talked to me first?"
 
     rando "Shut up, you pussy cat! You're not getting out of here without a fight!"
-    hide randopickingfight
 
+    play music "../audio/Pokemon-Battle.mp3"
+    pause 4
+    hide randopickingfight
+    play music "../audio/Pokemon-RivalAppears.mp3"
     #fighting squence occurs
     window hide
     call battle1
     window show
+
+    play music "../audio/School song.mp3"
 
     "(After your fight with the Random Student, you watch as he runs away from you with tears in his eyes.)"
 
@@ -633,11 +640,14 @@ label start:
 
     mc "Sorry, I noticed a bunch of people gathering around and thought I should check it out."
 
-    k "Oh well, you should keep close to me. We don't want any unnecessary attention. Now let's head out so we can hurry up and get out of here."
+    k "Oh well, you should keep close to me. We don't want any unnecessary attention."
+    k "Now let's head out so we can hurry up and get out of here."
 
     scene classroom
 
-    "(You and Kimiko walk towards your first and only class for the first day of school. As you sit through the boring introduction lecture, you begin to tune out the professor and sit and reflect on the events of the day. You think back to each of the people you met thus far.)"
+    "(You and Kimiko walk towards your first and only class for the first day of school."
+    "As you sit through the boring introduction lecture, you begin to tune out the professor and sit and reflect on the events of the day."
+    "You think back to each of the people you met thus far.)"
 
     #(An image with the name of each character flashes on screen.)
 
@@ -667,8 +677,10 @@ label start:
     scene realschool
     stop music
     play music "../audio/leavingschool.mp3"
-    "(At the end of your class, Kimiko grabs your hand and rushes you quickly out of the classroom. You find yourself back at the school's entrance and notice how you have arrived before any of the other students.)"
-    "(Kimiko attempts to push you out of the gate when suddenly you're hit by an invisible force field and get thrown backwards. You look up at Kimiko questioning what just happened.)"
+    "(At the end of your class, Kimiko grabs your hand and rushes you quickly out of the classroom."
+    "You find yourself back at the school's entrance and notice how you have arrived before any of the other students.)"
+    "(Kimiko attempts to push you out of the gate when suddenly you're hit by an invisible force field and get thrown backwards.)"
+    "(You look up at Kimiko questioning what just happened.)"
 
     show kimiko
 

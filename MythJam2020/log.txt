@@ -926,4 +926,16 @@ Texture testing:
 - 64px textures work.
 - 128px textures work.
 - 256px textures work.
-- 512px
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 42.2780001163s
+- Target is 5 frames in 0.333333333333 seconds.
+- Frame drawn at 0.000000 seconds.
+- Frame drawn at 0.016000 seconds.
+- Frame drawn at 0.032000 seconds.
+- Frame drawn at 0.049000 seconds.
+- Frame drawn at 0.066000 seconds.
+- 0.066000 seconds to render 5 frames.
