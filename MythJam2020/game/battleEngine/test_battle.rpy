@@ -7,23 +7,17 @@ label battle:
     call init_skills
     call init_fighters
     #   Initialize fighters and parties.
-    $ player = [creamSheep1]
+    $ player = [player1]
     $ friends = []
     $ allies = player +friends
-    $ enemies = [pinkSheep1, pinkSheep2, pinkSheep3]
+    $ enemies = [guard1]
     #   fighter.sprite_pos allows manual positioning of sprites.
     #   X-Y coordinates are fed to the attribute via a two-index list.
     #   Might be best if I replace this with a function that accepts a tuple.
-    $ creamSheep1.sprite_pos = [0.1, 0.3]                #      left_top
-    $ creamSheep2.sprite_pos = [0.1, 0.7]               #       left_bottom
-    $ brownBear1.sprite_pos = [0.4, 0.5]
-    $ pinkSheep1.sprite_pos = [0.9, 0.3]
-    $ pinkSheep2.sprite_pos = [0.9, 0.5]
-    $ pinkSheep3.sprite_pos = [0.9, 0.7]
+    $ player1.sprite_pos = [0.4, 0.5]
+    $ guard1.sprite_pos = [0.9, 0.5]
     #   For demonstration purposes, you can also use registerSkill to add a skill to a fighter during
     #   runtime, provided that the skill itself has been initalized earlier.
-    $ creamSheep1.registerSkill(AOEattack)
-    $ creamSheep2.registerSkill(AOEattack)
     $ allchars = allies + enemies
     #   orderBattle returns a descending list of a characters by specified stat, e.g. SPD.
     #   executeBattle runs the actual sequence and should be left alone.
