@@ -15,7 +15,7 @@ label battle1:
     #   X-Y coordinates are fed to the attribute via a two-index list.
     #   Might be best if I replace this with a function that accepts a tuple.
     $ player1.sprite_pos = [0.2, 0.5]
-    $ student1.sprite_pos = [2.2, 0.7]
+    $ student1.sprite_pos = [0.7, 0.5]
     #   For demonstration purposes, you can also use registerSkill to add a skill to a fighter during
     #   runtime, provided that the skill itself has been initalized earlier.
     $ allchars = allies + enemies

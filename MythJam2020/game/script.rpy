@@ -47,6 +47,7 @@ image bedroomNight=im.Scale("../images/bg/McbedroomNight.png", 1750, 1000)
 image randoteach= im.Scale("../images/char/RandoTeacher.png", 450, 650)
 image bob= im.Scale("../images/char/BobTheBodyGuard.png", 450, 650)
 image randopickingfight= im.Scale("../images/char/MaleFighter.png", 450, 650)
+image studentFighter = im.Scale("../images/char/MaleFighter.png", 450, 650)
 image corgikeychain = im.Scale("../images/CorgiKeyChain.png", 450, 450)
 image headmaster = im.Scale("../images/char/HeadmasterSilSilhouette.png", 550, 650)
 
