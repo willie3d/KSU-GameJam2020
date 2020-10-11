@@ -1,4 +1,4 @@
-init python:    
+init python:
     import random
     def increaseDef(initiator):
         """
@@ -12,21 +12,21 @@ init python:
         xMG = initiator.MG
         xHP = initiator.HP
         xMP = initiator.MP
-        
+
         defBonus = (xSPD + xMG + xHP + xMP) / 4
         defBonus = defBonus  * 0.05
         recMana = initiator.MP * 0.10
 
         defBonus = float("{0:.2f}".format(defBonus))
-        recMana = float("{0:.2f}".format(recMana))        
+        recMana = float("{0:.2f}".format(recMana))
         initiator.DEF += defBonus
         initiator.MP += recMana
         pstring02  = initiator.FTR + " is defending.  Defense increased by " + str(defBonus) +".  " + str(recMana) +" mana recovered."
         narrator(pstring02,  interact=False)
-        renpy.pause (normal_settings.dialogue_pause)
+        #renpy.pause (normal_settings.dialogue_pause)
         initiator.normalize_stats
-        return [int(defBonus), int(recMana)]        
-        
+        return [int(defBonus), int(recMana)]
+
 
     def damageTarget(initiator, skill, target):
         """
@@ -40,35 +40,35 @@ init python:
         initiator.MP -= skill.COST
         initiator.normalize_stats
         if skill.AOE:
-            pstring01 = initiator.FTR  + " used " + skill.SKL  + " on enemies as target." 
+            pstring01 = initiator.FTR  + " used " + skill.SKL  + " on enemies as target."
             narrator(pstring01, interact=False)
-            renpy.pause (normal_settings.dialogue_pause)
+            #renpy.pause (normal_settings.dialogue_pause)
             targets = target
             x_total = 0
-            doneAni = displayAOEanimation(initiator, skill, targets)        
+            doneAni = displayAOEanimation(initiator, skill, targets)
             for i in targets:
                 if i.ALIVE:
                     x = damageActual(initiator, skill, i)
                     x_total += x
-            pstring04 =  str(x_total) + " damage afflicted on targets." 
+            pstring04 =  str(x_total) + " damage afflicted on targets."
             narrator(pstring04,  interact=False)
-            renpy.pause (normal_settings.dialogue_pause)
-            return x  
-        
+            #renpy.pause (normal_settings.dialogue_pause)
+            return x
+
         else:
             """ The following code calls the displayAnimation method and resultant strings."""
             if target.ALIVE:
-                doneAni = displayAnimation(initiator, skill, target)        
-                pstring01 = initiator.FTR + " used " + skill.SKL  + " on "  +target.FTR + " as target." 
+                doneAni = displayAnimation(initiator, skill, target)
+                pstring01 = initiator.FTR + " used " + skill.SKL  + " on "  +target.FTR + " as target."
                 narrator(pstring01,  interact=False)
-                renpy.pause (normal_settings.dialogue_pause)
+                #renpy.pause (normal_settings.dialogue_pause)
                 x = damageActual(initiator, skill, target)
-                pstring04 =  str(x) + " damage afflicted on target." 
+                pstring04 =  str(x) + " damage afflicted on target."
                 narrator(pstring04,  interact=False)
-                renpy.pause (normal_settings.dialogue_pause)
-            return x  
-        
-    
+                #renpy.pause (normal_settings.dialogue_pause)
+            return x
+
+
     def damageActual(initiator, skill, target):
         """
                 damageActual is the one that actually computes damage values.
@@ -85,7 +85,7 @@ init python:
         iHP = initiator.HP
         iMP = initiator.MP
         iELEM = initiator.ELEM
-        
+
         tATK = target.ATK
         tDEF = target.DEF
         tSPD = target.SPD
@@ -93,7 +93,7 @@ init python:
         tHP = target.HP
         tMP = target.MP
         tELEM = target.ELEM
-        
+
         sDMG = skill.DMG
         sCOST = skill.COST
         sELEM = skill.ELEM
@@ -105,16 +105,16 @@ init python:
         xDMG = sDMG - (tDEF*modDMG)
         if xDMG <= 0:
             xDMG = 0
-            
-            
-            
+
+
+
         # This block actually deducts the damage from target's health.
         print str(xDMG) + " damage"
         target.HP =  target.HP -  xDMG
         initiator.normalize_stats
         # Following code changes the target's status depending on HP left.
         if target.HP <=0:
-            target.HP = 0 
+            target.HP = 0
             if not target.ALIVE:
                 target.ALIVE = False
                 print "Target was already dead."
@@ -125,7 +125,7 @@ init python:
                 hideFighter(target)
                 renpy.with_statement(dissolve, always=False)
                 narrator(pstring00,interact=False)
-                renpy.pause (normal_settings.dialogue_pause)
+                #renpy.pause (normal_settings.dialogue_pause)
             else:
                 print "Warning.  Something is not right"
-        return int(xDMG)       
+        return int(xDMG)

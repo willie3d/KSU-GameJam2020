@@ -5,7 +5,7 @@ label init_skills:
     $ SmartAttack = fighter_skill(
         SKL = "Smarts",
         DMG = intel,
-        AOE = True,
+        AOE = False,
         COST = 0,
         ELEM = "None",
         DESC = "Smart attack?",
@@ -17,7 +17,7 @@ label init_skills:
     $ CharismaAttack = fighter_skill(
         SKL = "Charisma",
         DMG = charisma,
-        AOE = True,
+        AOE = False,
         COST = 0,
         ELEM = "None",
         DESC = "Charisma attack?",
@@ -29,7 +29,7 @@ label init_skills:
     $ FunAttack = fighter_skill(
         SKL = "Fun",
         DMG = fun,
-        AOE = True,
+        AOE = False,
         COST = 0,
         ELEM = "None",
         DESC = "Fun attack?",
@@ -41,7 +41,7 @@ label init_skills:
     $ GenericAttack = fighter_skill(
         SKL = "yeet test string",
         DMG = 5,
-        AOE = True,
+        AOE = False,
         COST = 0,
         ELEM = "None",
         DESC = "Fun attack?",

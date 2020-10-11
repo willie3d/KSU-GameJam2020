@@ -11,7 +11,7 @@ init python:
         """
         displayFighters(orderInitiators)
         renpy.with_statement(dissolve, always=False)
-        renpy.block_rollback()
+
         onBattle = True         # Battle is ongoing.
         turnNum = 0             # Total turn number a.k.a how many loops.
         pstringStart =  "Engagement started!"
@@ -47,10 +47,10 @@ init python:
                             else:
                                 selectedTarget = aiTargetSelection(allies)
                                 x = damageTarget(initiator, selectedSkill, selectedTarget)
-                                renpy.block_rollback()
+
                         else:
                             answer = increaseDef(initiator)
-                            renpy.block_rollback()
+
                     else:
                         print "AI is dead."
                 else: # If current  is an AI:
@@ -62,14 +62,14 @@ init python:
                             if selectedSkill.AOE:
                                 selectedTarget = enemies
                                 x = damageTarget(initiator, selectedSkill, selectedTarget)
-                                renpy.block_rollback()
+
                             else:
                                 selectedTarget  = renpy.call_screen("battleUI", turnNum,  initiator, enemies, allies, useage="target")
                                 x = damageTarget(initiator, selectedSkill, selectedTarget)
-                                renpy.block_rollback()
+
                         else:
                             answer = increaseDef(x)
-                            renpy.block_rollback()
+
                     else:
                         print "Player is dead."
                 # Evaluate if battle is finished.
