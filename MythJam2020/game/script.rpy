@@ -14,6 +14,7 @@ define hm = Character("Headmaster")
 define prof = Character("Prof. Hayato")
 define unknown = Character("??????")
 define rando= Character("Random Student")
+define randoTeach =Character("Random Teacher")
 define bob= Character("Bob the Bodyguard")
 define k_friendship = 0
 define k_romance = 0
@@ -43,6 +44,7 @@ image office=im.Scale("../images/bg/Monsterprincipal.png", 1750, 750)
 image bedroomDay=im.Scale("../images/bg/mcbedroomnormal.jpg", 1750, 750)
 image areanearsignuptable=im.Scale("../images/bg/animefield.png", 1750, 750)
 image bedroomNight=im.Scale("../images/bg/McbedroomNight.png", 1750, 1000)
+image randoteach= im.Scale("../images/char/RandoTeacher.png", 450, 650)
 
 image tanuki = im.Scale("../images/char/Tanuki-Default.png", 1150, 650)
 image tanuki angry=im.Scale("../images/char/Tanuki-Angry-Annoyed.png", 1150, 650)
@@ -63,6 +65,17 @@ image reiki angry=im.Scale("../images/char/Reiki-Angry.png", 1150, 650)
 image reiki happy=im.Scale("../images/char/Reiki-Happy.png", 1150, 650)
 image reiki blush=im.Scale("../images/char/Reiki-Blushing.png", 1150, 650)
 image reiki sad=im.Scale("../images/char/Reiki-Sad.png", 1150, 650)
+
+image kimiko = im.Scale("../images/char/Kimiko-Default.png", 1150, 650)
+image kimiko angry=im.Scale("../images/char/Kimiko-Angry.png", 1150, 650)
+image kimiko happy=im.Scale("../images/char/Kimiko-Happy.png", 1150, 650)
+image kimiko blush=im.Scale("../images/char/Kimiko-Blushing.png", 1150, 650)
+image kimiko sad=im.Scale("../images/char/Kimiko-Sad.png", 1150, 650)
+
+image kimiko human default= im.Scale("../images/char/Kimiko-HumanDefault.png", 1150, 650)
+image kimiko human angry=im.Scale("../images/char/Kimiko-HumanAngry.png", 1150, 650)
+image kimiko human blush=im.Scale("../images/char/Kimiko-HumanBlushing.png", 1150, 650)
+image kimiko human surprised=im.Scale("../images/char/Kimiko-HumanSurprised.png", 1150, 650)
 
 $ pronoun1 = ("") # he, she, they
 $ pronoun2 = ("") # him, her, them
@@ -150,7 +163,7 @@ label start:
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
-    show kimiko fox
+    show kimiko
 
     #This waits for sometime
     pause 2
@@ -158,11 +171,11 @@ label start:
     "UMMM Did I see that correctly.. Did Kimiko just looked like a… fox?"
     mc "UMMMM...Kimiko"
 
-    show kimiko happy
-
     mc "Oh MY GOD! You're a fox!"
 
     k "W-What are you talking about? You must be blind."
+
+    show kimiko human surprised
     mc "I literally just saw your fox ears."
     k "I think you need to get your eyes checked, [pronoun6]. T-There’s this good eye doctor at the bottom of the hill."
     mc "I know what I saw!"
@@ -179,6 +192,7 @@ label start:
 
         "Look. If you are a fox, I’m not going to judge. Honestly you don’t have to tell me the truth if you don't want to.":
             $ k_friendship += 1
+            show kimiko human default
             "Kimiko looks at you with a surprised look on her face, speechless."
             k "..."
             mc "Look. I just-"
@@ -188,6 +202,7 @@ label start:
             k "Shhhh-"
         "But you were so cute with your ears and tail! Maybe a bit hot. Like H-O-T hot.":
             $ k_romance += 1
+            show kimiko human blush
             "Kimiko looks at you with a surprised yet confused look, while blushing very slightly."
             k "W-Wh-What..?"
             mc "I think you’re cute."
@@ -198,6 +213,7 @@ label start:
             "You pass out."
         "I’m not stupid. Maybe you should stop doubting me, fox girl. Maybe you’re the one that’s stupid.":
             $ k_hatred += 1
+            show kimiko human angry
             k "You don’t even know me. Back off."
             "Kimiko shakes her arm violently to get you to let go and kicks you."
             #insert shake
@@ -206,7 +222,7 @@ label start:
             "You hit the ground with a big 'BONK!' to the head and are rendered unconscious from the blow to the head. "
 
     #insert fade to black slowly
-    hide kimiko happy
+    hide kimiko
     scene black
     with fade
     with dissolve
@@ -425,7 +441,8 @@ label start:
 
     hide reiki
     scene signuptable
-    show rando at right
+    show kimiko at left
+    show randoteach at right
 
     "(You follow Kimiko to the table you were walking towards before. While waiting in the line, Kimiko turns towards you.)"
 
@@ -434,45 +451,47 @@ label start:
 
     "(As you move closer to the table, you try to remember the classes Kimiko told you to register for. Then, finally, you are at the front of the line.)"
 
-    rando "Welcome to the University of Amaterasu, freshman! What classes will you be registering for today?"
+    randoTeach "Welcome to the University of Amaterasu, freshman! What classes will you be registering for today?"
 
     menu:
         "Hey, I didn't really have time to prepare for today so my friend-o here will tell you what classes would work best for me.":
             $fun=fun+1
             "(The person accepts your excuse and looks towards Kimiko.)"
             "[pronoun1] will register for Introduction to Magical Beasts, Magical Beast Transformations, Introduction to the Human Race, and Introduction to Magical Abilities."
-            rando "Alright. And can we get your name?"
+            randoTeach "Alright. And can we get your name?"
             mc "[player_name]"
-            rando "All right you are registered. Here is the schedule. Have a good semester!"
+            randoTeach "All right you are registered. Here is the schedule. Have a good semester!"
         "I will register for Introduction to Magical Beasts, Magical Beast Transformations, Introduction to the Human Race, and Introduction to Magical Abilities":
             $intel=intel+1
             $charisma=charisma+1
             $k_friendship=k_friendship+1
+            show kimiko happy
 
             "(Kimiko looks proudly at you.)"
 
-            rando "Those are all very good classes. Now can we get your name?"
+            randoTeach "Those are all very good classes. Now can we get your name?"
 
             mc "[player_name]"
 
-            rando "All right you are registered. Here is the schedule. Have a Great Semester!"
+            randoTeach "All right you are registered. Here is the schedule. Have a Great Semester!"
 
         "I will register for Introduction to Magical Beasts, Magical Human Transformations, Introduction to Race, and Introduction to Magic":
             $intel=intel-1
             $charisma=charisma-1
+            show kimiko angry
 
             "(Kimiko looks annoyed at you.)"
 
-            rando "I'm not sure we offer all those classes…"
+            randoTeach "I'm not sure we offer all those classes…"
 
             k "I'm sorry about [pronoun2] they are new here. [pronoun1] will register for Introduction to Magical Beasts, Magical Beast Transformations, Introduction to the Human Race, and Introduction to Magical Abilities"
 
-            rando "Oh okay then, and does [pronoun1] know their name?"
+            randoTeach "Oh okay then, and does [pronoun1] know their name?"
 
             mc "Oh yes my name is [player_name]."
 
-            rando "Seems like you do know how to answer questions... Alright you are registered. Here is the schedule."
-    hide rando
+            randoTeach "Seems like you do know how to answer questions... Alright you are registered. Here is the schedule."
+    hide randoteach
     hide kimiko
 
     "(After registering for your classes, you stand to the side as you wait for Kimiko to finish her registration. While waiting, you notice a crowd start to gather in the center of the room and decide to move towards the crowd to see what's happening."
@@ -598,7 +617,7 @@ label start:
             $r_romance=r_romance-1
     scene realschool
     stop music
-    play music "../audio/leavingschool.mp3  "
+    play music "../audio/leavingschool.mp3"
     "(At the end of your class, Kimiko grabs your hand and rushes you quickly out of the classroom. You find yourself back at the school's entrance and notice how you have arrived before any of the other students.)"
     "(Kimiko attempts to push you out of the gate when suddenly you're hit by an invisible force field and get thrown backwards. You look up at Kimiko questioning what just happened.)"
 
@@ -625,6 +644,8 @@ label start:
             $k_romance=k_romance+1
             $fun=fun+1
 
+            show kimiko blush
+
             "(You actually wink after that… Wow.)"
 
             "(Kimiko blushes a little bit and then composes herself, sighing a little bit.)"
@@ -634,6 +655,8 @@ label start:
         "You didn’t think this through?! What the hell!":
             $charisma=charisma-1
             $k_hatred=k_hatred+1
+
+            show kimiko angry
 
             "(Kimiko sighs in disappointment.)"
 
@@ -659,6 +682,8 @@ label start:
     "(She coughs, slightly blushing.)"
 
     rando "Well, looking here, you two are in luck as we have one empty room in that unit."
+
+    show kimiko happy
 
     mc "Oh Yes! I'll take that room!"
 
@@ -697,41 +722,6 @@ label start:
 
     "Fun: [fun]"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    scene brightschool
-
-    "(Suddenly, a bright light fills the screen and the background changes to an beautiful school)"
-    "Oh! Kimiko is over there. I better hide before she sees me."
     # This ends the game.
-
-
-    "(You watch Kimiko talk to a male student, and as you attempt to get a closer look, you trip over a tree branch.)"
-    "(The male student points in your direction and Kimiko turns to look at you. Suddenly, she rushes to your side.)"
-
-    k "What in the world are you doing here!"
-
-
-
-
-
-
 
     call start2 from script2
