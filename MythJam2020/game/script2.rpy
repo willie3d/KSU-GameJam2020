@@ -414,7 +414,7 @@ label start2:
 
     "(You feel your panic rise as he brings up the word “human”. You quickly decide the best way to fix this situation is to fight your way out of it.)"
 
-    
+    call battle2
 
 
     return

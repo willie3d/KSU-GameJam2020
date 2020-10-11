@@ -30,7 +30,8 @@ define r_hatred = 0
 define intel=5
 define charisma=5
 define fun=5
-image silhouette = im.Scale("../images/char/FemaleProtagSilhouette.png", 1750, 750)
+image studentFighter = im.Scale("../images/char/MaleProtagSilhouette.png", 250, 1000)
+image silhouette = im.Scale("../images/char/FemaleProtagSilhouette.png", 250, 1000)
 image realschool = im.Scale("../images/bg/RealSchool.png", 1750, 750)
 image oldschool = im.Scale("../images/bg/SchoolDisguise.png", 1300, 750)
 image auditorium= im.Scale("../images/bg/MonsterAuditorium.png", 1500, 750)
@@ -91,7 +92,7 @@ label start:
             $ pronoun6 = "Sir"
             $ beauty = "cool"
             $ defaultName = "Geophery"
-            image silhouette = im.Scale("../images/char/FemaleProtagSilhouette.png", 1750, 750)
+            image silhouette = im.Scale("../images/char/MaleProtag4Silhouette.png", 250, 1000)
         "She, Her, Hers":
             $ pronoun1 = "she"
             $ pronoun2 = "her"
@@ -101,7 +102,7 @@ label start:
             $ pronoun6 = "Miss"
             $ beauty = "cute"
             $ defaultName = "Bethany"
-            image silhouette = im.Scale("../images/char/MaleProtag4Silhouette.png", 1750, 750)
+            image silhouette = im.Scale("../images/char/FemaleProtagSilhouette.png", 250, 1000)
         "They, Them, Theirs":
             $ pronoun1 = "they"
             $ pronoun2 = "them"
@@ -111,7 +112,7 @@ label start:
             $ pronoun6 = "Comrade"
             $ beauty = "new"
             $ defaultName = "Komrade"
-            image silhouette = im.Scale("../images/char/MaleProtag4Silhouette.png", 1750, 750)
+            image silhouette = im.Scale("../images/char/MaleProtag4Silhouette.png", 250, 1000)
 
     # The phrase in the brackets is the text that the game will display to prompt
     # the player to enter the name they've chosen.
@@ -482,7 +483,7 @@ label start:
 
     "As you get closer, you notice the lady from the stage earlier surrounded by students rushing to talk to her. As you attempt to get closer, one of her bodyguards walks toward you and pushes you to the floor. While getting back up you notice the woman walk towards you as she offers you her hand.)"
 
-    call battle
+    call battle1
 
     show bob at left
     show himiko at right

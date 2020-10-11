@@ -48,3 +48,19 @@ label init_fighters:
         pic_sprite =  "blackSheep", #"images/pipo-enemy031.png",
         sprite_pos = [0.5, 0.5]
         )
+
+    $ student1 = fighter(
+        FTR = "Student",
+        ALIVE = True,
+        ATK = 100,
+        DEF = 10,
+        SPD = 420,
+        MG = 10,
+        HP = 15,
+        MP = 1,
+        ELEM = "Water",
+        skill_set = [GenericAttack],
+        pic_card ="images/empty.png",
+        pic_sprite =  "studentFighter", #"images/pipo-enemy031.png",
+        sprite_pos = [0.5, 0.5]
+        )
