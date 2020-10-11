@@ -105,7 +105,7 @@ label start:
             $ pronoun6 = "Sir"
             $ beauty = "cool"
             $ defaultName = "Geophery"
-            image silhouette = im.Scale("../images/char/MaleProtag4Silhouette.png", 250, 1000)
+            image silhouette = im.Scale("../images/char/MaleProtag4Silhouette.png", 250, 500)
         "She, Her, Hers":
             $ pronoun1 = "she"
             $ pronoun2 = "her"
@@ -115,7 +115,7 @@ label start:
             $ pronoun6 = "Miss"
             $ beauty = "cute"
             $ defaultName = "Bethany"
-            image silhouette = im.Scale("../images/char/FemaleProtagSilhouette.png", 250, 1000)
+            image silhouette = im.Scale("../images/char/FemaleProtagSilhouette.png", 250, 500)
         "They, Them, Theirs":
             $ pronoun1 = "they"
             $ pronoun2 = "them"
@@ -502,7 +502,9 @@ label start:
 
     "As you get closer, you notice the lady from the stage earlier surrounded by students rushing to talk to her. As you attempt to get closer, one of her bodyguards walks toward you and pushes you to the floor. While getting back up you notice the woman walk towards you as she offers you her hand.)"
 
+    window hide
     call battle1
+    window show
 
     show bob at left
     show himiko at right
