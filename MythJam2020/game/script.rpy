@@ -50,6 +50,7 @@ image randopickingfight= im.Scale("../images/char/MaleFighter.png", 450, 650)
 image studentFighter = im.Scale("../images/char/MaleFighter.png", 250, 250)
 image corgikeychain = im.Scale("../images/CorgiKeyChain.png", 450, 450)
 image headmaster = im.Scale("../images/char/HeadmasterSilSilhouette.png", 550, 650)
+image professor = im.Scale("../images/char/Prof-Hayato.png", 1150, 650)
 
 image tanuki = im.Scale("../images/char/Tanuki-Default.png", 1150, 650)
 image tanuki angry=im.Scale("../images/char/Tanuki-Angry-Annoyed.png", 1150, 650)
@@ -103,7 +104,7 @@ $ beauty = ("") #cool, cute, new
 
 label start:
 
-    default preferences.text_cps = 80
+    default preferences.text_cps = 50
 
     play music "../audio/mixkit-classique-63.mp3"
 
@@ -196,9 +197,10 @@ label start:
 
     mc "Oh MY GOD! You're a fox!"
 
+    show kimiko human surprised
+
     k "W-What are you talking about? You must be blind."
 
-    show kimiko human surprised
     mc "I literally just saw your fox ears."
     k "I think you need to get your eyes checked, [pronoun6]. T-There’s this good eye doctor at the bottom of the hill."
     mc "I know what I saw!"
@@ -207,6 +209,8 @@ label start:
     "No, I can't leave the conversation at that. I know what I saw!"
 
     "(You grab Kimiko’s arm and prevent her from leaving.)" with hpunch
+
+    show kimiko human angry
 
     k "Let go of me. I told you. I am not a fox. You probably just saw the shadows or something."
 
@@ -268,6 +272,7 @@ label start:
     "(You follow Kimiko into the deepest part of the woods. Hiding behind every tree you come across.)"
     scene oldschool
 
+    play music "../audio/leavingschool.mp3"
 
     scene oldschool at truecenter
     "(Suddenly you come cross a clearing in the woods and a large old school house comes into view)"
@@ -348,14 +353,18 @@ label start:
 
     mc "What was that all about? I'm a Nekomata now? And your friend is a Tanuki! Where is this? What's going on!"
 
-    k "I'm sorry I had to do some quick thinking before you got yourself hurt. This is the University of Amaterasu, a special school for all mythological beings. I have no idea how you were able to get in here, but we have to hurry and get you out before you're discovered."
+    k "I'm sorry I had to do some quick thinking before you got yourself hurt."
+    k "This is the University of Amaterasu, a special school for all mythological beings. I have no idea how you were able to get in here, but we have to hurry and get you out before you're discovered."
     k "If they find out you're a human, they will kill you or steal your soul; both are not very good options."
 
     mc "Wait! You still didn't explain anything. How does this place even exist!"
 
+    show professor at rightPosition
+
     "(Suddenly, you notice a professor walking towards you and Kimiko. He stops in front of the two of you.)"
 
-    prof "What are you guys still doing out here?! It's not safe after 8am to be standing near the school gates. We don't want any unnecessary human visitors. Now, hurry along, I'll escort you to the auditorium for the freshmen orientation."
+    prof "What are you guys still doing out here?! It's not safe after 8am to be standing near the school gates. We don't want any unnecessary human visitors."
+    prof " Now, hurry along, I'll escort you to the auditorium for the freshmen orientation."
 
     k "Wait, Prof Hayato, I left something at home, and I have to go back."
 
@@ -365,19 +374,22 @@ label start:
 
     k "(Whispered) \"Damn it, just follow my lead. We will leave at the end of the day!\""
 
-    "(The professor leads you and Kimiko to the auditorium, where you notice students standing in *attention. Looking towards the stage, you see a beautiful lady standing at the podium looking down upon the students.)"
-    "(Standing beside her, you notice what seems to be the Headmaster, who you can't see clearly as she stands in the darkness. As you stand in your place, the room begins to go quiet, and the students turn their attention towards the stage.)"
+    "(The professor leads you and Kimiko to the auditorium, where you notice students standing in attention. Looking towards the stage, you see a beautiful lady standing at the podium looking down upon the students.)"
+    "(Standing beside her, you notice what seems to be the Headmaster, who you can't see clearly as she stands in the darkness.)"
+    "( As you stand in your place, the room begins to go quiet, and the students turn their attention towards the stage.)"
+    hide professor
 
     scene auditorium
 
     hide kimiko
     show himiko smug
 
-    h "Hello Everyone! My name is Himiko, and I am your class president. Welcome, freshman students, to the University of Amaterasu."
+    h "Hello Everyone! My name is Himiko, and I am your Student Council President. Welcome, freshman students, to the University of Amaterasu."
     h "The first university of its kind designed by my ancestors to introduce young mythological beings like yourselves to the human realm with classes from blending in to the human realm to taking a human soul."
 
     h "The goal of this university is to prepare you all for your lives outside, whether you take the boring option of becoming one with humans or the far more interesting option of taking human souls as your play things."
-    h "I hope you find this university to be everything you have ever wanted, and if you need anything, feel free to talk to me as I said before this university is my family legacy. Now head outside and register for your first semester classes!"
+    h "I hope you find this university to be everything you have ever wanted, and if you need anything, feel free to talk to me as I said before this university is my family legacy."
+    h "Now head outside and register for your first semester classes!"
 
     play sound "../audio/applause.wav"
 
@@ -385,7 +397,8 @@ label start:
 
     scene signuptable
 
-    "(On your way towards the registration table, you trip over someone's foot and end up pushing a male student to the ground. As you look down on the man you just pushed to the floor, you feel your embarrassment rise and attempt to help him up.)"
+    "(On your way towards the registration table, you trip over someone's foot and end up pushing a male student to the ground.)"
+    "(As you look down on the man you just pushed to the floor, you feel your embarrassment rise and attempt to help him up.)"
 
     show kimiko at leftPosition
     show reiki at rightPosition
@@ -435,7 +448,7 @@ label start:
 
             rando "Hey Reiki! You gotta hurry and register for classes."
 
-            r "Oh, I'm Sorry I have to get going, I hope we can talk again sometime soon."
+            r "Oh, I'm sorry I have to get going, I hope we can talk again sometime soon."
             hide corgikeychain
 
             "(Reiki leaves you alone and you notice Kimiko waving you over to the table.)"
@@ -473,9 +486,11 @@ label start:
     "(You follow Kimiko to the table you were walking towards before. While waiting in the line, Kimiko turns towards you.)"
 
     k "(Whispered) Okay, when you get to the table, tell them you want to register for: Introduction to Magical Beasts, Magical Beast Transformations, Introduction to the Human Race, and Introduction to Magical Abilities."
-    k "These should all be easy classes for you to hide the fact that you're not supposed to be here. But don't worry, I’ll be standing behind you if you mess up."
+    k "These should all be easy classes for you to hide the fact that you're not supposed to be here."
+    k "But don't worry, I’ll be standing behind you if you mess up."
 
-    "(As you move closer to the table, you try to remember the classes Kimiko told you to register for. Then, finally, you are at the front of the line.)"
+    "(As you move closer to the table, you try to remember the classes Kimiko told you to register for.)"
+    "(Then, finally, you are at the front of the line.)"
 
     randoTeach "Welcome to the University of Amaterasu, freshman! What classes will you be registering for today?"
 
@@ -486,7 +501,8 @@ label start:
             k "[CapPronoun1] will register for Introduction to Magical Beasts, Magical Beast Transformations, Introduction to the Human Race, and Introduction to Magical Abilities."
             randoTeach "Alright. And can we get your name?"
             mc "[player_name]"
-            randoTeach "All right you are registered. Here is the schedule. Have a good semester!"
+            randoTeach "All right you are registered. Here is the schedule."
+            randoTeach "Have a good semester!"
         "I will register for Introduction to Magical Beasts, Magical Beast Transformations, Introduction to the Human Race, and Introduction to Magical Abilities":
             $intel=intel+1
             $charisma=charisma+1
@@ -520,9 +536,12 @@ label start:
     hide randoteach
     hide kimiko
 
-    "(After registering for your classes, you stand to the side as you wait for Kimiko to finish her registration. While waiting, you notice a crowd start to gather in the center of the room and decide to move towards the crowd to see what's happening."
+    "(After registering for your classes, you stand to the side as you wait for Kimiko to finish her registration.)"
+    with hpunch
+    "(While waiting, you notice a crowd start to gather in the center of the room and decide to move towards the crowd to see what's happening.)"
 
-    "As you get closer, you notice the lady from the stage earlier surrounded by students rushing to talk to her. As you attempt to get closer, one of her bodyguards walks toward you and pushes you to the floor. While getting back up you notice the woman walk towards you as she offers you her hand.)"
+    "(As you get closer, you notice the lady from the stage earlier surrounded by students rushing to talk to her."
+    "As you attempt to get closer, one of her bodyguards walks toward you and pushes you to the floor. While getting back up, you notice the woman walk towards you as she offers you her hand.)"
 
 
     show bob at left
@@ -581,7 +600,8 @@ label start:
     hide himiko
     hide  bob
 
-    "Wow, that girl has a large fan club… Let me not incur the wrath of one of them."
+    "Wow, that girl has a large fan club…"
+    "Let me not incur the wrath of one of them."
 
     "(As you make your way back towards the table where you left Kimiko, you notice a male student rushing towards you. Suddenly, he phases in front of you and attempts to push you backwards. As you catch your balance, you look towards your assailant.)"
 
