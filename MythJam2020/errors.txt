@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 175: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 176: expected statement.
-    >>>>>>> Head
-                ^
+File "game/script.rpy", line 599: expected statement.
+    "Charisma: " + charisma
+                 ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Oct 10 19:52:23 2020
+Sat Oct 10 22:52:17 2020

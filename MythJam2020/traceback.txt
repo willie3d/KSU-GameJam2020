@@ -1,30 +1,50 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 179, in script call
-    call start2 from script2
-  File "game/script2.rpy", line 357, in script
-    "You tune the lecture out as you think about the fun Manga you started last night. The story was far more interesting than whatever the teacher is talking about.":
-  File "game/script2.rpy", line 357, in <module>
-    "You tune the lecture out as you think about the fun Manga you started last night. The story was far more interesting than whatever the teacher is talking about.":
-NameError: name 'intel' is not defined
+  File "game/script.rpy", line 212, in script
+    scene realschool
+  File "renpy/common/000window.rpy", line 95, in _window_auto_callback
+    _window_hide()
+  File "renpy/common/000window.rpy", line 85, in _window_hide
+    renpy.with_statement(trans)
+IOError: Couldn't find file '../audio/School song/mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 179, in script call
-    call start2 from script2
-  File "game/script2.rpy", line 357, in script
-    "You tune the lecture out as you think about the fun Manga you started last night. The story was far more interesting than whatever the teacher is talking about.":
-  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 914, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Applications/renpy-7.3.5-sdk/renpy/python.py", line 2028, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/script2.rpy", line 357, in <module>
-    "You tune the lecture out as you think about the fun Manga you started last night. The story was far more interesting than whatever the teacher is talking about.":
-NameError: name 'intel' is not defined
+  File "game/script.rpy", line 212, in script
+    scene realschool
+  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 1269, in execute
+    statement_name("scene")
+  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 45, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 95, in _window_auto_callback
+    _window_hide()
+  File "renpy/common/000window.rpy", line 85, in _window_hide
+    renpy.with_statement(trans)
+  File "/Applications/renpy-7.3.5-sdk/renpy/exports.py", line 1601, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 2251, in do_with
+    clear=clear)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 2702, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 3380, in interact_core
+    renpy.audio.audio.periodic()
+  File "/Applications/renpy-7.3.5-sdk/renpy/audio/audio.py", line 1060, in periodic
+    six.reraise(exc[0], exc[1], exc[2])
+  File "/Applications/renpy-7.3.5-sdk/renpy/audio/audio.py", line 1038, in periodic_thread_main
+    periodic_pass()
+  File "/Applications/renpy-7.3.5-sdk/renpy/audio/audio.py", line 979, in periodic_pass
+    c.periodic()
+  File "/Applications/renpy-7.3.5-sdk/renpy/audio/audio.py", line 457, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "/Applications/renpy-7.3.5-sdk/renpy/audio/audio.py", line 73, in load
+    rv = renpy.loader.load(fn)
+  File "/Applications/renpy-7.3.5-sdk/renpy/loader.py", line 576, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file '../audio/School song/mp3'.
 
 Darwin-19.6.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
 MythJam2020 1.0
-Sat Oct 10 21:09:53 2020
+Sun Oct 11 00:40:14 2020

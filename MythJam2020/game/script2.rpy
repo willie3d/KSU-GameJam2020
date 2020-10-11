@@ -27,9 +27,9 @@ $ h_hatred = 0
 $ r_friendship = 0
 $ r_romance = 0
 $ r_hatred = 0
-$ intel=0
-$ charisma=0
-$ fun=0
+$ intel=5
+$ charisma=5
+$ fun=5
 $ pronoun1 = ("") # he, she, they
 $ pronoun2 = ("") # him, her, them
 $ pronoun3 = ("") # his, her, their
@@ -133,8 +133,9 @@ label start2:
 
             "Suddenly you hear a room open as Kimiko leaves her dorm room."
     "(You watch as Kimiko makes her way towards you and Reiki in the kitchen.)"
-
-    show kimiko
+    hide reiki
+    show kimiko at right
+    show reiki at left
 
     k "Oh hey guys. I see you two have met each other already."
 
@@ -150,8 +151,8 @@ label start2:
 
     "(Just as you are about to ask that question, two doors open, and you see Taiki and Himiko exit their rooms.)"
 
-    show taiki
-    show himeko
+    show taiki at  right
+    show himeko at  left
 
     t "Kimiko, how come you didn't invite me to this little party you seem to be having?"
 
@@ -176,6 +177,7 @@ label start2:
     hide kimiko
     hide himeko
     hide reiki
+    show taiki
 
     t "On a date. Wink."
 
@@ -188,10 +190,11 @@ label start2:
     mc "Oh okay. Any hints on what we are doing?"
 
     t "Well…. just be ready for anything!"
-
-    show kimiko
-    show himeko
-    show reiki
+    hide taiki
+    show taiki at  right
+    show kimiko at left
+    show himeko at right
+    show reiki at  left
 
     k "Ohh sounds like fun, what are the rest of you planning?"
 
@@ -218,7 +221,12 @@ label start2:
     k "Anyway, we should hurry up since me and [MC Name] have class together in a little while."
 
     h "Oh ummm…. I was hoping to walk with [MC Name] to class. They could be a good protection from my fan club, and I've been meaning to educate [her/him] on this school's diverse history."
-
+    hide taiki
+    hide kimiko
+    hide himeko
+    show taiki
+    show kimiko at left
+    show himeko at right
     menu:
         "Oh well. I was already planning on walking with Kimiko, but maybe next time.":
             $k_romance=k_romance+2
@@ -235,8 +243,10 @@ label start2:
             k "Well if you're sure."
 
             hide himeko
-            show kimiko
+            hide kimiko
+            hide taiki
             scene hallway
+            show kimiko
 
             "(You and Kimiko leave the dorm room after an enjoyable breakfast. As you're walking down the hall, you decide to start a conversation.)"
 
@@ -270,7 +280,10 @@ label start2:
             mc "Alright. I'll see you later, Kimiko."
 
             hide kimiko
+            hide himeko
+            hide taiki
             scene hallway
+            show himiko
 
             "(You and Himiko leave the dorm room and start the walk towards your classroom. As you are walking down the hall, you notice a group of people staring at you menacingly. )"
 
@@ -393,6 +406,7 @@ label start2:
     "As you make your way to the Headmasters office, you feel your anxiety rise. You have yet to meet her, but for some reason you could tell that you didn't want to be anywhere near her."
 
     scene principal office
+    show strong man
 
     "(After arriving at the headmaster's office, you introduce yourself to the lady at the front desk, who tells you to go right in and wait as someone would be on their way to talk to you. As you sit in the leather chair waiting for your fate, you hear the door open and instead of the headmaster a strong muscular man walks in.)"
 
