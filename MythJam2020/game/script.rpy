@@ -38,7 +38,7 @@ image auditorium= im.Scale("../images/bg/MonsterAuditorium.png", 1500, 750)
 image kitsunebackyard=im.Scale("../images/bg/KitsuneBackyard.png", 1750, 750)
 image signuptable=im.Scale("../images/bg/MonsterHallway.png", 1500, 750)
 image classroom=im.Scale("../images/bg/WelcomeClassroom.png", 1500, 750)
-image allcharlineup=im.Scale("../images/bg/WelcomeClassroom.png", 1500, 750)
+image allcharlineup=im.Scale("../images/bg/MenuImage.png", 1500, 750)
 image dormcommonspace=im.Scale("../images/bg/CommonArea.png", 1500, 750)#smaller
 image protagdormday=im.Scale("../images/bg/ProtagDormDay.png", 1750, 750)
 image office=im.Scale("../images/bg/Monsterprincipal.png", 1750, 750)
@@ -161,12 +161,12 @@ label start:
 
     $ mc = Character(player_name)
     # These display lines of dialogue.
-    "It's been almost a week since the situation with my father took place that changed my life forever.
-    My mother and I have decided it would be best for the both of us to move far away from the city and
+    "It's been almost a week since the situation with my father took place that changed my life forever."
+    "My mother and I have decided it would be best for the both of us to move far away from the city and
     live in a remote house in the countryside."
 
-    "We found the house through a family friend and have been living with the Inariou family for the past week.
-    They seem nice enough, but I havent really had much time to talk to their daughter who happens to be the same age as me."
+    "We found the house through a family friend and have been living with the Inariou family for the past week."
+    "They seem nice enough, but I havent really had much time to talk to their daughter who happens to be the same age as me."
 
     "I'm hopeful that me and my mother will be able to make a good life here and maybe I'll be able to make some new friends."
 
@@ -203,7 +203,8 @@ label start:
     k "W-What are you talking about? You must be blind."
 
     mc "I literally just saw your fox ears."
-    k "I think you need to get your eyes checked, [pronoun6]. T-There’s this good eye doctor at the bottom of the hill."
+    k "I think you need to get your eyes checked, [pronoun6]."
+    k "T-There’s this good eye doctor at the bottom of the hill."
     mc "I know what I saw!"
     k "No-no. I think you need some glasses... Well I’m going to continue on my peaceful walk now-"
 
@@ -242,7 +243,7 @@ label start:
         "I’m not stupid. Maybe you should stop doubting me, fox girl. Maybe you’re the one that’s stupid.":
             $ k_hatred += 1
             show kimiko human angry
-            k "You don’t even know me. Back off."
+            k "You don’t even know me. Back off!"
             "Kimiko shakes her arm violently to get you to let go and kicks you." with vpunch
             #insert shake
             "BONK!" with hpunch
@@ -278,7 +279,8 @@ label start:
     scene oldschool at truecenter
     "(Suddenly you come cross a clearing in the woods and a large old school house comes into view)"
 
-    "Why is Kimiko going into such a creepy school? Also since when was there a University this close to our home?"
+    "Why is Kimiko going into such a creepy school?"
+    "Also since when was there a University this close to our home?"
 
     "(You follow Kimiko through the school gate.)"
 
@@ -295,7 +297,9 @@ label start:
 
     "Oh! Kimiko is over there. I better hide before she sees me."
 
-    "(You watch Kimiko talk to a male student, and as you attempt to get a closer look, you trip over a tree branch. The male student points in your direction and Kimiko turns to look at you. Suddenly, she rushes to your side.)"
+    "(You watch Kimiko talk to a male student, and as you attempt to get a closer look, you trip over a tree branch.)"
+    "(The male student points in your direction and Kimiko turns to look at you.)"
+    "(Suddenly, she rushes to your side.)"
 
     k "What in the world are you doing here!"
 
@@ -313,7 +317,8 @@ label start:
 
     mc  "Well ummm… you see I just moved here a couple days ago, and I had no idea I was going to be coming to this school till today."
 
-    t "Oh wow. Well, welcome. I hope you enjoy going here. I've heard it's the best school for all us mythical beings. If you have some free time later, I’d love to show you around."
+    t "Oh wow. Well, welcome. I hope you enjoy going here. I've heard it's the best school for all us mythical beings."
+    t "If you have some free time later, I’d love to show you around."
 
     menu:
         "He doesn’t seem bad. \"Okay sure that sounds like fun.\"":
@@ -355,16 +360,19 @@ label start:
     mc "What was that all about? I'm a Nekomata now? And your friend is a Tanuki! Where is this? What's going on!"
 
     k "I'm sorry I had to do some quick thinking before you got yourself hurt."
-    k "This is the University of Amaterasu, a special school for all mythological beings. I have no idea how you were able to get in here, but we have to hurry and get you out before you're discovered."
+    k "This is the University of Amaterasu, a special school for all mythological beings."
+    k "I have no idea how you were able to get in here, but we have to hurry and get you out before you're discovered."
     k "If they find out you're a human, they will kill you or steal your soul; both are not very good options."
 
     mc "Wait! You still didn't explain anything. How does this place even exist!"
 
     show professor at rightPosition
 
-    "(Suddenly, you notice a professor walking towards you and Kimiko. He stops in front of the two of you.)"
+    "(Suddenly, you notice a professor walking towards you and Kimiko.)"
+    "(He stops in front of the two of you.)"
 
-    prof "What are you guys still doing out here?! It's not safe after 8am to be standing near the school gates. We don't want any unnecessary human visitors."
+    prof "What are you guys still doing out here?!"
+    prof "It's not safe after 8am to be standing near the school gates. We don't want any unnecessary human visitors."
     prof " Now, hurry along, I'll escort you to the auditorium for the freshmen orientation."
 
     k "Wait, Prof Hayato, I left something at home, and I have to go back."
@@ -375,12 +383,14 @@ label start:
 
     k "(Whispered) \"Damn it, just follow my lead. We will leave at the end of the day!\""
 
-    "(The professor leads you and Kimiko to the auditorium, where you notice students standing in attention. Looking towards the stage, you see a beautiful lady standing at the podium looking down upon the students.)"
-    "(Standing beside her, you notice what seems to be the Headmaster, who you can't see clearly as she stands in the darkness.)"
-    "( As you stand in your place, the room begins to go quiet, and the students turn their attention towards the stage.)"
+    "(The professor leads you and Kimiko to the auditorium, where you notice students standing in attention.)"
     hide professor
 
     scene auditorium
+    "(Looking towards the stage, you see a beautiful lady standing at the podium looking down upon the students.)"
+    "(Standing beside her, you notice what seems to be the Headmaster, who you can't see clearly as she stands in the darkness.)"
+    "( As you stand in your place, the room begins to go quiet, and the students turn their attention towards the stage.)"
+
 
     hide kimiko
     show himiko smug
@@ -422,7 +432,8 @@ label start:
 
             show reiki at rightPosition
 
-            r "Please watch where you’re going next time. You’re glad it was me and not one of the others. Also, you didn’t BUMP into me. You PUSHED me, but I will let it slide this time."
+            r "Please watch where you’re going next time. You’re glad it was me and not one of the others."
+            r "Also, you didn’t BUMP into me. You PUSHED me, but I will let it slide this time."
 
             mc "Okay… But-"
 
@@ -484,7 +495,8 @@ label start:
     show kimiko at leftPosition
     show randoteach at right
 
-    "(You follow Kimiko to the table you were walking towards before. While waiting in the line, Kimiko turns towards you.)"
+    "(You follow Kimiko to the table you were walking towards before.)"
+    "(While waiting in the line, Kimiko turns towards you.)"
 
     k "(Whispered) Okay, when you get to the table, tell them you want to register for: Introduction to Magical Beasts, Magical Beast Transformations, Introduction to the Human Race, and Introduction to Magical Abilities."
     k "These should all be easy classes for you to hide the fact that you're not supposed to be here."
@@ -542,11 +554,12 @@ label start:
     "(While waiting, you notice a crowd start to gather in the center of the room and decide to move towards the crowd to see what's happening.)"
 
     "(As you get closer, you notice the lady from the stage earlier surrounded by students rushing to talk to her."
-    "As you attempt to get closer, one of her bodyguards walks toward you and pushes you to the floor. While getting back up, you notice the woman walk towards you as she offers you her hand.)"
+    "(As you attempt to get closer, one of her bodyguards walks toward you and pushes you to the floor.)"
+    "(While getting back up, you notice the woman walk towards you as she offers you her hand.)"
 
 
     show bob at left
-    show himiko at rightPosition
+    show himiko angry at rightPosition
 
     h "Seriously, Bob, how many times do I have to tell you to stop pushing people to the floor."
 
@@ -554,7 +567,9 @@ label start:
 
     h "Seriously, we don't need another person trying to get money from my family,"
 
-    "(Himiko moves closer to the MC)"
+    "(Himiko moves closer to [player_name])"
+
+    show himiko
 
     h "Now are you okay, and can you stand?"
 
@@ -604,8 +619,9 @@ label start:
     "Wow, that girl has a large fan club…"
     "Let me not incur the wrath of one of them."
 
-    "(As you make your way back towards the table where you left Kimiko, you notice a male student rushing towards you."
-    "Suddenly, he phases in front of you and attempts to push you backwards. As you catch your balance, you look towards your assailant.)"
+    "(As you make your way back towards the table where you left Kimiko, you notice a male student rushing towards you.)"
+    "(Suddenly, he phases in front of you and attempts to push you backwards.)"
+    "(As you catch your balance, you look towards your assailant.)"
 
     scene areanearsignuptable
     show randopickingfight
@@ -682,7 +698,7 @@ label start:
     "(Kimiko attempts to push you out of the gate when suddenly you're hit by an invisible force field and get thrown backwards.)"
     "(You look up at Kimiko questioning what just happened.)"
 
-    show kimiko
+    show kimiko sad
 
     k "Oh no, oh no! I think you're stuck in here……."
 
@@ -690,7 +706,8 @@ label start:
 
     mc "What do you mean I'm stuck here?!"
 
-    k "Humans aren't supposed to be able to pass through the gate as it has a spell to keep them out. I guess something must have gone wrong and now you can't get out."
+    k "Humans aren't supposed to be able to pass through the gate as it has a spell to keep them out."
+    k "I guess something must have gone wrong and now you can't get out."
 
     menu:
         "How did I even get in here in the first place if that’s the case?":
@@ -722,7 +739,7 @@ label start:
             "(Kimiko sighs in disappointment.)"
 
             k "Okay. Look. I wasn’t the one who told you to follow me, okay? Now let’s go. We need to head to the housing office and hope we can find you somewhere to stay for the night."
-
+            with hpunch
             "(Kimiko grabs you by the ear and drags you along.)"
 
     scene office
@@ -769,13 +786,15 @@ label start:
 
     mc "You are going to tell my Mom about all of this??"
 
-    k "Weeeell, not exactly. Us, Kitsune, have the ability to influence people, and I can convince your mother that you agreed to attend this university."
+    k "Weeeell, not exactly."
+    k "Us, Kitsune, have the ability to influence people, and I can convince your mother that you agreed to attend this university."
 
     mc "Oh really.. I guess that makes it better knowing that she won't be worried about me."
 
     k "Just rest well. You had a weird and stressful day. I'll see you tomorrow for the first official day of school."
 
-    "(After Kimiko leaves your room, you get ready for bed. As soon as you get into bed, you find yourself falling asleep after such a long and weird day. - We don’t blame you. Lol)"
+    "(After Kimiko leaves your room, you get ready for bed.)"
+    "(As soon as you get into bed, you find yourself falling asleep after such a long and weird day. - We don’t blame you. Lol)"
 
     scene black
 
