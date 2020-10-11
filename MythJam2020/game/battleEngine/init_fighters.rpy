@@ -8,13 +8,13 @@ label init_fighters:
         ATK = 100,
         DEF = 10,
         SPD = 420,
-        MG = 0,
+        MG = 1,
         HP = 25,
-        MP = 0,
-        ELEM = "None",
+        MP = 1,
+        ELEM = "Water",
         skill_set = [SmartAttack, CharismaAttack, FunAttack],
-        pic_card ="images/pipo-enemy031.png",
-        pic_sprite =  "blackSheep", #"images/pipo-enemy031.png",
+        pic_card ="images/empty.png",
+        pic_sprite =  "silhouette", #"images/pipo-enemy031.png",
         sprite_pos = [0.5, 0.5]
         )
 
@@ -26,10 +26,10 @@ label init_fighters:
         SPD = 420,
         MG = 10,
         HP = 420,
-        MP = 0,
+        MP = 1,
         ELEM = "Water",
         skill_set = [GenericAttack],
-        pic_card ="images/pipo-enemy031.png",
+        pic_card ="images/empty.png",
         pic_sprite =  "blackSheep", #"images/pipo-enemy031.png",
         sprite_pos = [0.5, 0.5]
         )
@@ -41,10 +41,26 @@ label init_fighters:
         SPD = 420,
         MG = 10,
         HP = 15,
-        MP = 0,
+        MP = 1,
         ELEM = "Water",
         skill_set = [GenericAttack],
-        pic_card ="images/pipo-enemy031.png",
+        pic_card ="images/empty.png",
         pic_sprite =  "blackSheep", #"images/pipo-enemy031.png",
+        sprite_pos = [0.5, 0.5]
+        )
+
+    $ student1 = fighter(
+        FTR = "Student",
+        ALIVE = True,
+        ATK = 100,
+        DEF = 10,
+        SPD = 420,
+        MG = 10,
+        HP = 15,
+        MP = 1,
+        ELEM = "Water",
+        skill_set = [GenericAttack],
+        pic_card ="images/empty.png",
+        pic_sprite =  "studentFighter", #"images/pipo-enemy031.png",
         sprite_pos = [0.5, 0.5]
         )

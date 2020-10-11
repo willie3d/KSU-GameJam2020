@@ -1,50 +1,84 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 602, in script
-    "(At the end of your class, Kimiko grabs your hand and rushes you quickly out of the classroom. You find yourself back at the school's entrance and notice how you have arrived before any of the other students.)"
-  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
-    _window_show()
-  File "renpy/common/000window.rpy", line 60, in _window_show
-    renpy.with_statement(trans)
-IOError: Couldn't find file '../audio/leavingschool.mp3  '.
+  File "game/script.rpy", line 485, in script call
+    call battle
+  File "game/battleEngine/test_battle.rpy", line 28, in script
+    $ victorBattle = executeBattle(allies, enemies, orderInitiators)
+  File "game/battleEngine/test_battle.rpy", line 28, in <module>
+    $ victorBattle = executeBattle(allies, enemies, orderInitiators)
+  File "game/battleEngine/handler-battle.rpy", line 58, in executeBattle
+    selectedAction = renpy.call_screen("battleUI", turnNum,  initiator, enemies, allies, useage="action")
+  File "game/battleEngine/screen_battle-menu.rpy", line 16, in execute
+    screen battleUI(turn_num, currentFighter, enemies, allies, useage):
+  File "game/battleEngine/screen_battle-menu.rpy", line 16, in execute
+    screen battleUI(turn_num, currentFighter, enemies, allies, useage):
+  File "game/battleEngine/screen_battle-menu.rpy", line 26, in execute
+    frame:
+  File "game/battleEngine/screen_battle-menu.rpy", line 28, in execute
+    has hbox spacing 20
+  File "game/battleEngine/screen_battle-menu.rpy", line 29, in execute
+    vbox:
+  File "game/battleEngine/screen_battle-menu.rpy", line 30, in execute
+    add currentFighter.pic_card size(80, 80)
+Exception: An empty string cannot be used as a displayable.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 602, in script
-    "(At the end of your class, Kimiko grabs your hand and rushes you quickly out of the classroom. You find yourself back at the school's entrance and notice how you have arrived before any of the other students.)"
-  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 671, in execute
-    statement_name("say")
-  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 45, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
-    _window_show()
-  File "renpy/common/000window.rpy", line 60, in _window_show
-    renpy.with_statement(trans)
-  File "/Applications/renpy-7.3.5-sdk/renpy/exports.py", line 1601, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 2251, in do_with
-    clear=clear)
-  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 2702, in interact
+  File "game/script.rpy", line 485, in script call
+    call battle
+  File "game/battleEngine/test_battle.rpy", line 28, in script
+    $ victorBattle = executeBattle(allies, enemies, orderInitiators)
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/battleEngine/test_battle.rpy", line 28, in <module>
+    $ victorBattle = executeBattle(allies, enemies, orderInitiators)
+  File "game/battleEngine/handler-battle.rpy", line 58, in executeBattle
+    selectedAction = renpy.call_screen("battleUI", turnNum,  initiator, enemies, allies, useage="action")
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\exports.py", line 2905, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 3380, in interact_core
-    renpy.audio.audio.periodic()
-  File "/Applications/renpy-7.3.5-sdk/renpy/audio/audio.py", line 1060, in periodic
-    six.reraise(exc[0], exc[1], exc[2])
-  File "/Applications/renpy-7.3.5-sdk/renpy/audio/audio.py", line 1038, in periodic_thread_main
-    periodic_pass()
-  File "/Applications/renpy-7.3.5-sdk/renpy/audio/audio.py", line 979, in periodic_pass
-    c.periodic()
-  File "/Applications/renpy-7.3.5-sdk/renpy/audio/audio.py", line 457, in periodic
-    topf = load(self.file_prefix + filename + self.file_suffix)
-  File "/Applications/renpy-7.3.5-sdk/renpy/audio/audio.py", line 73, in load
-    rv = renpy.loader.load(fn)
-  File "/Applications/renpy-7.3.5-sdk/renpy/loader.py", line 576, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file '../audio/leavingschool.mp3  '.
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\display\screen.py", line 430, in visit_all
+    callback(self)
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\display\screen.py", line 440, in per_interact
+    self.update()
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\display\screen.py", line 625, in update
+    self.screen.function(**self.scope)
+  File "game/battleEngine/screen_battle-menu.rpy", line 16, in execute
+    screen battleUI(turn_num, currentFighter, enemies, allies, useage):
+  File "game/battleEngine/screen_battle-menu.rpy", line 16, in execute
+    screen battleUI(turn_num, currentFighter, enemies, allies, useage):
+  File "game/battleEngine/screen_battle-menu.rpy", line 26, in execute
+    frame:
+  File "game/battleEngine/screen_battle-menu.rpy", line 28, in execute
+    has hbox spacing 20
+  File "game/battleEngine/screen_battle-menu.rpy", line 29, in execute
+    vbox:
+  File "game/battleEngine/screen_battle-menu.rpy", line 30, in execute
+    add currentFighter.pic_card size(80, 80)
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\sl2\sldisplayables.py", line 430, in sl2add
+    d = renpy.easy.displayable(d, scope=scope)
+  File "D:\Downloads\renpy-7.3.5-sdk\renpy\easy.py", line 108, in displayable
+    raise Exception("An empty string cannot be used as a displayable.")
+Exception: An empty string cannot be used as a displayable.
 
-Darwin-19.6.0-x86_64-i386-64bit
+Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 MythJam2020 1.0
 Sun Oct 11 04:14:06 2020
