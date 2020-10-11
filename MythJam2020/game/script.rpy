@@ -438,6 +438,8 @@ label start:
     scene areanearsignuptable
     "As you get closer, you notice the lady from the stage earlier surrounded by students rushing to talk to her. As you attempt to get closer, one of her bodyguards walks toward you and pushes you to the floor. While getting back up you notice the woman walk towards you as she offers you her hand.)"
 
+    call battle
+
     show bob at left
     show himiko at right
 

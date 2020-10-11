@@ -23,7 +23,7 @@ init python:
         initiator.MP += recMana
         pstring02  = initiator.FTR + " is defending.  Defense increased by " + str(defBonus) +".  " + str(recMana) +" mana recovered."
         narrator(pstring02,  interact=False)
-        #renpy.pause (normal_settings.dialogue_pause)
+        renpy.pause (normal_settings.dialogue_pause)
         initiator.normalize_stats
         return [int(defBonus), int(recMana)]
 
@@ -42,7 +42,7 @@ init python:
         if skill.AOE:
             pstring01 = initiator.FTR  + " used " + skill.SKL  + " on enemies as target."
             narrator(pstring01, interact=False)
-            #renpy.pause (normal_settings.dialogue_pause)
+            renpy.pause (normal_settings.dialogue_pause)
             targets = target
             x_total = 0
             doneAni = displayAOEanimation(initiator, skill, targets)
@@ -52,7 +52,7 @@ init python:
                     x_total += x
             pstring04 =  str(x_total) + " damage afflicted on targets."
             narrator(pstring04,  interact=False)
-            #renpy.pause (normal_settings.dialogue_pause)
+            renpy.pause (normal_settings.dialogue_pause)
             return x
 
         else:
@@ -61,11 +61,11 @@ init python:
                 doneAni = displayAnimation(initiator, skill, target)
                 pstring01 = initiator.FTR + " used " + skill.SKL  + " on "  +target.FTR + " as target."
                 narrator(pstring01,  interact=False)
-                #renpy.pause (normal_settings.dialogue_pause)
+                renpy.pause (normal_settings.dialogue_pause)
                 x = damageActual(initiator, skill, target)
                 pstring04 =  str(x) + " damage afflicted on target."
                 narrator(pstring04,  interact=False)
-                #renpy.pause (normal_settings.dialogue_pause)
+                renpy.pause (normal_settings.dialogue_pause)
             return x
 
 
@@ -125,7 +125,7 @@ init python:
                 hideFighter(target)
                 renpy.with_statement(dissolve, always=False)
                 narrator(pstring00,interact=False)
-                #renpy.pause (normal_settings.dialogue_pause)
+                renpy.pause (normal_settings.dialogue_pause)
             else:
                 print "Warning.  Something is not right"
         return int(xDMG)
