@@ -47,7 +47,7 @@ image bedroomNight=im.Scale("../images/bg/McbedroomNight.png", 1750, 1000)
 image randoteach= im.Scale("../images/char/RandoTeacher.png", 450, 650)
 image bob= im.Scale("../images/char/BobTheBodyGuard.png", 450, 650)
 image randopickingfight= im.Scale("../images/char/MaleFighter.png", 450, 650)
-image studentFighter = im.Scale("../images/char/MaleFighter.png", 450, 650)
+image studentFighter = im.Scale("../images/char/MaleFighter.png", 250, 250)
 image corgikeychain = im.Scale("../images/CorgiKeyChain.png", 450, 450)
 image headmaster = im.Scale("../images/char/HeadmasterSilSilhouette.png", 550, 650)
 
@@ -598,8 +598,6 @@ label start:
     window show
 
     "(After your fight with the Random Student, you watch as he runs away from you with tears in his eyes.)"
-
-    hide randopickingfight
 
     "Serves him right attempting to fight me when I don't even know him."
 
