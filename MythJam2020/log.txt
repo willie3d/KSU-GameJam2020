@@ -1,7 +1,7 @@
 Sun Oct 11 05:29:10 2020
 Darwin-19.6.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
- 
+
 
 Bootstrap to the start of init.init took 0.07s
 Early init took 0.00s
@@ -43,7 +43,7 @@ Renderer: 'AMD Radeon Pro 555X OpenGL Engine'
 Version: '2.1 ATI-3.10.16'
 Display Info: None
 Extensions:
-    
+
     GL_APPLE_aux_depth_stencil
     GL_APPLE_client_storage
     GL_APPLE_element_array

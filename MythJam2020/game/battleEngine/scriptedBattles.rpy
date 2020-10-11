@@ -14,8 +14,8 @@ label battle1:
     #   fighter.sprite_pos allows manual positioning of sprites.
     #   X-Y coordinates are fed to the attribute via a two-index list.
     #   Might be best if I replace this with a function that accepts a tuple.
-    $ player1.sprite_pos = [0.4, 0.5]
-    $ guard1.sprite_pos = [0.9, 0.5]
+    $ player1.sprite_pos = [0.2, 0.5]
+    $ student1.sprite_pos = [2.2, 0.7]
     #   For demonstration purposes, you can also use registerSkill to add a skill to a fighter during
     #   runtime, provided that the skill itself has been initalized earlier.
     $ allchars = allies + enemies
@@ -36,11 +36,7 @@ label battle1:
     return
 
 label battle2:
-    #This is a test battle.
-    #   init_skills initializes fighter skills. Always initiate skills first.
-    #   init_fighters initalizes fighter objects. Also resets their values. Do not use if fighters have
-    #   dynamic stats linked to another stat system. TL;DR Do not use if fighter stats are fixed stats.
-    #   init_skills and init_fighters probably only need to be called once.
+
     call init_skills
     call init_fighters
     #   Initialize fighters and parties.
