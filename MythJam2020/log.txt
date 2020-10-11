@@ -1,18 +1,18 @@
-Sat Oct 10 19:54:51 2020
+Sat Oct 10 21:07:56 2020
 Darwin-19.6.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
  
 
 Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
-Loader init took 0.01s
+Loader init took 0.02s
 Loading error handling took 0.02s
-Loading script took 0.11s
+Loading script took 0.19s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.03s
+Running init code took 0.07s
+Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to '/Users/kamrynjones/Library/RenPy/backups/MythJam2020':
@@ -21,7 +21,7 @@ Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.01s
 DPI scale factor: 1.000000
-Creating interface object took 0.12s
+Creating interface object took 0.30s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
@@ -30,7 +30,7 @@ Analyze screens took 0.01s
 Save screen analysis took 0.05s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.04s
+Save bytecode. took 0.05s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.02s
@@ -197,39 +197,33 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 0.861280918121s
+Total time until interface ready: 1.20712900162s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.016350 seconds.
-- Frame drawn at 0.031804 seconds.
-- Frame drawn at 0.048605 seconds.
-- Frame drawn at 0.065411 seconds.
-- 0.065411 seconds to render 5 frames.
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
+- Frame drawn at 0.015888 seconds.
+- Frame drawn at 0.031513 seconds.
+- Frame drawn at 0.048363 seconds.
+- Frame drawn at 0.065490 seconds.
+- 0.065490 seconds to render 5 frames.
+
+Full traceback:
+  File "game/script.rpy", line 179, in script call
+    call start2 from script2
+  File "game/script2.rpy", line 357, in script
+    "You tune the lecture out as you think about the fun Manga you started last night. The story was far more interesting than whatever the teacher is talking about.":
+  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 914, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Applications/renpy-7.3.5-sdk/renpy/python.py", line 2028, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script2.rpy", line 357, in <module>
+    "You tune the lecture out as you think about the fun Manga you started last night. The story was far more interesting than whatever the teacher is talking about.":
+NameError: name 'intel' is not defined
+
+While running game code:
+  File "game/script.rpy", line 179, in script call
+    call start2 from script2
+  File "game/script2.rpy", line 357, in script
+    "You tune the lecture out as you think about the fun Manga you started last night. The story was far more interesting than whatever the teacher is talking about.":
+  File "game/script2.rpy", line 357, in <module>
+    "You tune the lecture out as you think about the fun Manga you started last night. The story was far more interesting than whatever the teacher is talking about.":
+NameError: name 'intel' is not defined

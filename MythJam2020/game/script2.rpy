@@ -13,7 +13,8 @@ define r = Character("Reiki Omoi")
 define hm = Character("Headmaster")
 define prof = Character("Prof. Hayato")
 define unknown = Character("??????")
-define rando= Charater("Random Student")
+define rando= Character("Random Student")
+define strongman= Character("Strong Man")
 $ k_friendship = 0
 $ k_romance = 0
 $ k_hatred = 0
@@ -233,6 +234,7 @@ label start2:
             k "Well if you're sure."
 
             hide himeko
+            show kimiko
             scene hallway
 
             "(You and Kimiko leave the dorm room after an enjoyable breakfast. As you're walking down the hall, you decide to start a conversation.)"
@@ -376,9 +378,26 @@ label start2:
 
             "(As you yeet the paper across the class room to Kimiko, she picks up the note and looks at you smiling.)"
 
-            "(After opening and responding to the note, she throws it back to you with the words \“Well, maybe you should try paying attention. They are talking about the Nekomata species.\”)"
+            "After opening and responding to the note, she throws it back to you with the words \“Well, maybe you should try paying attention. They are talking about the Nekomata species.\""
 
-            
+            "You reply to the note with the words: \“But the professor is so boring…\” As you throw the note once again across the classroom, you realize a little too late that your aim was off and the note lands right in front of Prof. Hayato. He turns his attention to you as he opens the note and reads the words you had written."
+
+            prof "Excuse me, [MC Name]. It seems like my lecture was so boooring that you felt the need to tell me with this note. I think it would be best if you made your way straight to the Headmaster's Office Now!"
+
+            mc "Fine…."
+
+            "(As you leave the classroom, you bid Kimiko goodbye, and take the lonely walk towards the Headmaster's Office.)"
+    scene hallway
+
+    "As you make your way to the Headmasters office, you feel your anxiety rise. You have yet to meet her, but for some reason you could tell that you didn't want to be anywhere near her."
+
+    scene principal office
+
+    "(After arriving at the headmaster's office, you introduce yourself to the lady at the front desk, who tells you to go right in and wait as someone would be on their way to talk to you. As you sit in the leather chair waiting for your fate, you hear the door open and instead of the headmaster a strong muscular man walks in.)"
+
+    strongman "The Headmaster isn't available right now so I've been told to come here and interrogate you. This should be simple and easy as long as you are not a human."
+
+    "(You feel your panic rise as he brings up the word “human”. You quickly decide the best way to fix this situation is to fight your way out of it.)"
 
 
 
