@@ -81,4 +81,4 @@ Exception: An empty string cannot be used as a displayable.
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 MythJam2020 1.0
-Sun Oct 11 04:56:27 2020
+Sun Oct 11 04:14:06 2020
