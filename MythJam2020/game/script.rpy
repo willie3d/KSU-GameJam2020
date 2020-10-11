@@ -112,7 +112,7 @@ label start:
     "We found the house through a family friend and have been living with the Inariou family for the past week.
     They seem nice enough, but I havent really had much time to talk to their daughter who happens to be the same age as me."
 
-    "I'm hopeful that me and my mother will be able to make a good life here and maybe I'll be able to make new friends as well."
+    "I'm hopeful that me and my mother will be able to make a good life here and maybe I'll be able to make some new friends."
 
     ###########TRAILER HERE############
     ###########TRAILER HERE############
@@ -124,8 +124,8 @@ label start:
     # images directory to show it.
     scene bedroomNight
 
-    "UGG I can't seem to sleep.. again"
-    "Maybe I should take a walk, and then hopefully, I might be able to sleep."
+    "UGG I can't seem to be able to sleep..."
+    "Maybe I should take a walk, then I might be able to fall asleep."
 
     scene kitsunebackyard
 
@@ -137,18 +137,18 @@ label start:
     #This waits for sometime
     pause 2
 
-    "UMMM Did I see that correctly Kimiko just looked like a… fox?"
-    mc "UMMMM..."
+    "UMMM Did I see that correctly.. Did Kimiko just looked like a… fox?"
+    mc "UMMMM...Kimiko"
 
     show kimiko happy
 
     mc "Oh MY GOD! You're a fox!"
 
     k "W-What are you talking about? You must be blind."
-    mc "I literally just saw your fox ears. You can’t say I’m crazy"
-    k "I think you need to get your eyes checked, [pronoun6]. T-There’s this good eye place over at-"
-    mc "I know what I saw! I am not blind. Maybe you should put on your own glasses you had before."
-    k "No-no. I think you need some glasses... I’m going to go on my peaceful walk now-"
+    mc "I literally just saw your fox ears."
+    k "I think you need to get your eyes checked, [pronoun6]. T-There’s this good eye doctor at the bottom of the hill."
+    mc "I know what I saw!"
+    k "No-no. I think you need some glasses... Well I’m going to continue on my peaceful walk now-"
 
     "No, I can't leave the conversation at that. I know what I saw!"
 
@@ -195,18 +195,19 @@ label start:
 
 
     #Insert creak sound
-    scene bedroomDay
-    "(MC eyes are closed, and then a loud creak is heard. The screen is suddenly filled with light as we see the MC’s bedroom in background)"
 
+    scene bedroomDay
     "Wait, when did I get back to my bedroom? And what was that noise?"
-    "(You get out of bed quickly and look out the window.)"
-    "(You see Kimiko standing outside and decide to get dressed quickly to see what she is doing.
-     You put a hoodie and glasses on and leave the house following Kimiko into the woods.)"
+    "(You get out of bed quickly and look outside your window to see whats happening.)"
+    "(Suddenly you see Kimiko sneaking out the house and decide to get dressed so you can follow her.)"
+    "(You put on a random hoodie and a pair of sunglasses hoping to remain inconspicuious. Then you on leave the house following Kimiko into the woods.)"
+
+    "(You follow Kimiko into the deepest part of the woods. Hiding behind every tree you come across.)"
     scene oldschool
 
-    "You get out of bed quickly and look out the window. You see Kimiko standing outside and decide to get dressed quickly to see what she is doing. You put a hoodie and glasses on and leave the house following Kimiko into the woods."
 
     scene oldschool at truecenter
+    "(Suddenly you come cross a clearing in the woods and a large old school house comes into view)"
 
     "Why is Kimiko going into such a creepy school? Also since when was there a University this close to our home?"
 
