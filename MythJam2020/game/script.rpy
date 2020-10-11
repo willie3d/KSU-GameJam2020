@@ -153,6 +153,7 @@ label start:
     if player_name == "":
         $ player_name= defaultName
 
+    $ mc = Character(player_name)
     # These display lines of dialogue.
     "It's been almost a week since the situation with my father took place that changed my life forever.
     My mother and I have decided it would be best for the both of us to move far away from the city and
