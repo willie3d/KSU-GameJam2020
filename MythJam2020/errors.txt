@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 599: expected statement.
-    "Charisma: " + charisma
-                 ^
+File "game/options.rpy", line 210: expected statement.
+    config.layers = ['master', 'transient', 'battle_sprites', 'screens',  'battle_anims', 'overlay' ]
+                  ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Oct 10 22:52:17 2020
+Sun Oct 11 02:17:48 2020
