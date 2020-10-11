@@ -706,9 +706,13 @@ label start:
 
     randoTeach "Welcome, how may I help you today?"
 
+    show kimiko blush
+
     k "Hi, my friend here is wondering if there are any housing options left available... possibly in the same unit as me?"
 
     "(She coughs, slightly blushing.)"
+
+    show kimiko
 
     rando "Well, looking here, you two are in luck as we have one empty room in that unit."
 
