@@ -93,7 +93,8 @@ label start2:
 
             mc "Of course if you're willing to trust me I would love to hear about lil Reiki before he became a vengeful spirit."
 
-            r  "My story is a common one, but what made it so much worse was the fact that it was my last day of high school senior year. I had completed everything I needed to do to graduate smoothly and when I least expected it the person I trusted most stabbed me in the back. I would tell you more, but the specific memories of that moment have disappeared from my mind and all I have left is the hate I felt for my only friend."
+            r  "My story is a common one, but what made it so much worse was the fact that it was my last day of high school senior year. I had completed everything I needed to do to graduate smoothly and when I least expected it the person I trusted most stabbed me in the back."
+            r  "I would tell you more, but the specific memories of that moment have disappeared from my mind and all I have left is the hate I felt for my only friend."
 
             mc "I’m so sorry that happened to you. I hope one day you will be able to trust people again."
 
