@@ -35,7 +35,7 @@ image studentFighter = im.Scale("../images/char/MaleProtagSilhouette.png", 250, 
 image realschool = im.Scale("../images/bg/RealSchool.png", 1750, 750)
 image oldschool = im.Scale("../images/bg/SchoolDisguise.png", 1300, 750)
 image auditorium= im.Scale("../images/bg/MonsterAuditorium.png", 1500, 750)
-image kitsunebackyard=im.Scale("../images/bg/Kitsune_Home_Backyard.png", 1750, 750)
+image kitsunebackyard=im.Scale("../images/bg/KitsuneBackyard.png", 1750, 750)
 image signuptable=im.Scale("../images/bg/MonsterHallway.png", 1500, 750)
 image classroom=im.Scale("../images/bg/WelcomeClassroom.png", 1500, 750)
 image dormcommonspace=im.Scale("../images/bg/CommonArea.png", 1500, 750)#smaller
@@ -45,6 +45,9 @@ image bedroomDay=im.Scale("../images/bg/mcbedroomnormal.jpg", 1750, 750)
 image areanearsignuptable=im.Scale("../images/bg/animefield.png", 1750, 750)
 image bedroomNight=im.Scale("../images/bg/McbedroomNight.png", 1750, 1000)
 image randoteach= im.Scale("../images/char/RandoTeacher.png", 450, 650)
+image bob= im.Scale("../images/char/BobTheBodyGuard.png", 450, 650)
+image randopickingfight= im.Scale("../images/char/MaleFighter.png", 450, 650)
+image corgikeychain = im.Scale("../images/CorgiKeyChain.png", 450, 450)
 
 image tanuki = im.Scale("../images/char/Tanuki-Default.png", 1150, 650)
 image tanuki angry=im.Scale("../images/char/Tanuki-Angry-Annoyed.png", 1150, 650)
@@ -76,6 +79,15 @@ image kimiko human default= im.Scale("../images/char/Kimiko-HumanDefault.png", 1
 image kimiko human angry=im.Scale("../images/char/Kimiko-HumanAngry.png", 1150, 650)
 image kimiko human blush=im.Scale("../images/char/Kimiko-HumanBlushing.png", 1150, 650)
 image kimiko human surprised=im.Scale("../images/char/Kimiko-HumanSurprised.png", 1150, 650)
+
+transform rightPosition:
+    xalign 4.0
+    yalign 0.5
+
+transform leftPosition:
+    xalign -2.75
+    yalign 0.5
+
 
 $ pronoun1 = ("") # he, she, they
 $ pronoun2 = ("") # him, her, them
@@ -264,8 +276,8 @@ label start:
 
     "What in the world is going on? I'm pretty sure this school didn't look this good two seconds ago."
 
-    show kimiko at left
-    show tanuki at right
+    show kimiko at leftPosition
+    show tanuki at rightPosition
 
     "Oh! Kimiko is over there. I better hide before she sees me."
 
@@ -301,7 +313,7 @@ label start:
             t  "Oh, that's my cue. I hope to talk to you later."
         "That sounds like fun. Why not. \"Sure I'd love going on a tour with you. You seem very knowledgeable.\"":
             $t_romance=t_romance+1
-            show tanuki blush at right
+            show tanuki blush at rightPosition
 
             "(Taiki looks at you with a slight blush.)"
 
@@ -312,7 +324,7 @@ label start:
             t "Oh, that's the bell. I guess I'll have to leave now.  I'm excited for our next conversation!"
         "But I’m so lazy! \"Ugg..Do I have to.\"":
             $t_hatred=t_hatred+1
-            show tanuki angry at right
+            show tanuki angry at rightPosition
             "(Taiki looks at you with an angry expression.)"
 
             play sound "../audio/betterschoolbell.mp3"
@@ -322,6 +334,7 @@ label start:
             t  "Well, I'm gonna get out of your way. Bye."
 
     hide tanuki
+    show kimiko at default
 
     "(Kimiko quickly pulls you aside and looks at you with a puzzled look.)"
 
@@ -366,12 +379,12 @@ label start:
 
     "(On your way towards the registration table, you trip over someone's foot and end up pushing a male student to the ground. As you look down on the man you just pushed to the floor, you feel your embarrassment rise and attempt to help him up.)"
 
-    show kimiko at left
-    show reiki at right
+    show kimiko at leftPosition
+    show reiki at rightPosition
 
     r "WHAT THE FUCK!"
 
-    show reiki angry at right
+    show reiki angry at rightPosition
 
     mc "OMG I’m so sorry! I was too focused on the table. I wasn't looking where I was going."
 
@@ -385,7 +398,7 @@ label start:
 
             "(Reiki deeply sighs.)"
 
-            show reiki at right
+            show reiki at rightPosition
 
             r "Please watch where you’re going next time. You’re glad it was me and not one of the others. Also, you didn’t BUMP into me. You PUSHED me, but I will let it slide this time."
 
@@ -397,9 +410,10 @@ label start:
 
         "You help Reiki up. \"I apologize. I didn’t mean to. Please take this as a token of my apology.\" You give Reiki a corgi keychain.":
             $r_romance=r_romance+1
+            show corgikeychain at truecenter
             "(Reiki looks a bit surprised.)"
 
-            show reiki blush at right
+            show reiki blush at rightPosition
 
             r "Oh- I actually… Really like these… H-How did you know?"
 
@@ -414,13 +428,14 @@ label start:
             rando "Hey Reiki! You gotta hurry and register for classes."
 
             r "Oh, I'm Sorry I have to get going, I hope we can talk again sometime soon."
+            hide corgikeychain
 
             "(Reiki leaves you alone and you notice Kimiko waving you over to the table.)"
 
         "You cross your arms. \"I’m soooorry, princess.\"":
             $r_hatred=r_hatred+1
 
-            show reiki angry at right
+            show reiki angry at rightPosition
 
             "(Reiki stands up and looks at you in complete anger and disgust.)"
 
@@ -444,7 +459,7 @@ label start:
 
     hide reiki
     scene signuptable
-    show kimiko at left
+    show kimiko at leftPosition
     show randoteach at right
 
     "(You follow Kimiko to the table you were walking towards before. While waiting in the line, Kimiko turns towards you.)"
@@ -501,12 +516,9 @@ label start:
 
     "As you get closer, you notice the lady from the stage earlier surrounded by students rushing to talk to her. As you attempt to get closer, one of her bodyguards walks toward you and pushes you to the floor. While getting back up you notice the woman walk towards you as she offers you her hand.)"
 
-    window hide
-    call battle1
-    window show
 
     show bob at left
-    show himiko at right
+    show himiko at rightPosition
 
     h "Seriously, Bob, how many times do I have to tell you to stop pushing people to the floor."
 
@@ -530,7 +542,7 @@ label start:
         "No, it's really okay. I don't need anything.":
             $h_friendship=h_friendship+1
 
-            show himiko happy at right
+            show himiko happy at rightPosition
 
             "(Himiko looks at you with a happy expression.)"
 
@@ -540,7 +552,7 @@ label start:
         "Well, maybe you could show me around the school some time.":
             $h_romance=h_romance+1
 
-            show himiko blush at right
+            show himiko blush at rightPosition
 
             "(Himiko looks at you with a slight blush.)"
 
@@ -551,7 +563,7 @@ label start:
 
         "You could give me some money, and I might just forget about all of this.":
             $h_hatred=h_hatred+1
-            show himiko angry at right
+            show himiko angry at rightPosition
 
             h "Oh well, Bob, I'll let you deal with this."
 
@@ -566,7 +578,7 @@ label start:
     "(As you make your way back towards the table where you left Kimiko, you notice a male student rushing towards you. Suddenly, he phases in front of you and attempts to push you backwards. As you catch your balance, you look towards your assailant.)"
 
     scene areanearsignuptable
-    show rando fightingboy
+    show randopickingfight
 
     rando "Who told you that you were allowed to talk to our Goddess Himiko!"
 
@@ -575,10 +587,13 @@ label start:
     rando "Shut up, you pussy cat! You're not getting out of here without a fight!"
 
     #fighting squence occurs
+    window hide
+    call battle1
+    window show
 
     "(After your fight with the Random Student, you watch as he runs away from you with tears in his eyes.)"
 
-    hide rando fightingboy
+    hide randopickingfight
 
     "Serves him right attempting to fight me when I don't even know him."
 
@@ -680,7 +695,7 @@ label start:
     k "(Whispered)\"Remember this is only temporary until we can find a way for you to get out of the forcefield.\""
 
     show rando at left
-    show kimiko at right
+    show kimiko at rightPosition
 
     rando "Welcome, how may I help you today?"
 
