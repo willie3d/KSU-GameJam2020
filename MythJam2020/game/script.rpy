@@ -199,7 +199,7 @@ label start:
 
     "No, I can't leave the conversation at that. I know what I saw!"
 
-    "(You grab Kimiko’s arm and prevent her from leaving.)"
+    "(You grab Kimiko’s arm and prevent her from leaving.)" with hpunch
 
     k "Let go of me. I told you. I am not a fox. You probably just saw the shadows or something."
 
@@ -231,9 +231,9 @@ label start:
             $ k_hatred += 1
             show kimiko human angry
             k "You don’t even know me. Back off."
-            "Kimiko shakes her arm violently to get you to let go and kicks you."
+            "Kimiko shakes her arm violently to get you to let go and kicks you." with vpunch
             #insert shake
-            "BONK!"
+            "BONK!" with hpunch
             #shake text
             "You hit the ground with a big 'BONK!' to the head and are rendered unconscious from the blow to the head. "
 
@@ -586,6 +586,7 @@ label start:
     mc "Um.. I don't know what you mean she talked to me first?"
 
     rando "Shut up, you pussy cat! You're not getting out of here without a fight!"
+    hide randopickingfight
 
     #fighting squence occurs
     window hide

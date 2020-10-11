@@ -39,7 +39,7 @@ label init_skills:
     )
 
     $ GenericAttack = fighter_skill(
-        SKL = "yeet test string",
+        SKL = "regular",
         DMG = 5,
         AOE = False,
         COST = 0,

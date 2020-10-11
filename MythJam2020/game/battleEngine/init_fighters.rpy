@@ -61,6 +61,6 @@ label init_fighters:
         ELEM = "Water",
         skill_set = [GenericAttack],
         pic_card ="images/empty.png",
-        pic_sprite =  "studentFighter", #"images/pipo-enemy031.png",
+        pic_sprite =  "randopickingfight", #"images/pipo-enemy031.png",
         sprite_pos = [0.5, 0.5]
         )
