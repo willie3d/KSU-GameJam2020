@@ -2,17 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 133: invalid syntax
-    kFriendship++
+File "game/script.rpy", line 175: expected statement.
+    =======
+          ^
 
-
-File "game/script.rpy", line 142: invalid syntax
-    kRomance++
-
-
-File "game/script.rpy", line 152: invalid syntax
-    kHatred++
-
+File "game/script.rpy", line 176: expected statement.
+    >>>>>>> Head
+                ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Oct 10 19:46:48 2020
+Sat Oct 10 19:52:23 2020

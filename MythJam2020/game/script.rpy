@@ -25,6 +25,9 @@ define h_hatred = 0
 define r_friendship = 0
 define r_romance = 0
 define r_hatred = 0
+define itel=0
+define charisma=0
+define fun=0
 $ pronoun1 = ("") # he, she, they
 $ pronoun2 = ("") # him, her, them
 $ pronoun3 = ("") # his, her, their
@@ -172,7 +175,5 @@ label start:
 
     # This ends the game.
 
-=======
->>>>>>> Head
 
     call start2 from script2

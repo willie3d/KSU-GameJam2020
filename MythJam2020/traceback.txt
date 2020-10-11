@@ -1,26 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 152, in script
-    $ kHatred += 1
-  File "game/script.rpy", line 152, in <module>
-    $ kHatred += 1
-NameError: name 'kHatred' is not defined
+  File "game/script.rpy", line 176, in script call
+    call start2 from script2
+  File "game/script2.rpy", line 72, in script
+    $rFriendship=rFriendship+2
+  File "game/script2.rpy", line 72, in <module>
+    $rFriendship=rFriendship+2
+NameError: name 'rFriendship' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 152, in script
-    $ kHatred += 1
-  File "D:\Downloads\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
+  File "game/script.rpy", line 176, in script call
+    call start2 from script2
+  File "game/script2.rpy", line 72, in script
+    $rFriendship=rFriendship+2
+  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 914, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\Downloads\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
+  File "/Applications/renpy-7.3.5-sdk/renpy/python.py", line 2028, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/script.rpy", line 152, in <module>
-    $ kHatred += 1
-NameError: name 'kHatred' is not defined
+  File "game/script2.rpy", line 72, in <module>
+    $rFriendship=rFriendship+2
+NameError: name 'rFriendship' is not defined
 
-Windows-8-6.2.9200
+Darwin-19.6.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
 MythJam2020 1.0
-Sat Oct 10 19:31:10 2020
+Sat Oct 10 19:53:01 2020
