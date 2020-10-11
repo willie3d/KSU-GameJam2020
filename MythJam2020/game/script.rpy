@@ -48,6 +48,7 @@ image randoteach= im.Scale("../images/char/RandoTeacher.png", 450, 650)
 image bob= im.Scale("../images/char/BobTheBodyGuard.png", 450, 650)
 image randopickingfight= im.Scale("../images/char/MaleFighter.png", 450, 650)
 image corgikeychain = im.Scale("../images/CorgiKeyChain.png", 450, 450)
+image headmaster = im.Scale("../images/char/HeadmasterSilSilhouette.png", 550, 650)
 
 image tanuki = im.Scale("../images/char/Tanuki-Default.png", 1150, 650)
 image tanuki angry=im.Scale("../images/char/Tanuki-Angry-Annoyed.png", 1150, 650)
@@ -694,7 +695,7 @@ label start:
 
     k "(Whispered)\"Remember this is only temporary until we can find a way for you to get out of the forcefield.\""
 
-    show rando at left
+    show headmaster at left
     show kimiko at rightPosition
 
     rando "Welcome, how may I help you today?"
@@ -711,7 +712,7 @@ label start:
 
     rando "Very nice, here is the key to room 1312 B. Have a good semester!"
 
-    hide rando
+    hide headmaster
     hide kimiko
 
     scene dormcommonspace

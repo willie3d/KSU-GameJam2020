@@ -1,9 +1,9 @@
-Sun Oct 11 12:20:16 2020
+Sun Oct 11 12:28:04 2020
 Darwin-19.6.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
  
 
-Bootstrap to the start of init.init took 0.06s
+Bootstrap to the start of init.init took 0.07s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.02s
@@ -26,7 +26,7 @@ Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.02s
+Analyze screens took 0.01s
 Save screen analysis took 0.06s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
@@ -197,14 +197,11 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 1.0254650116s
+Total time until interface ready: 1.02020001411s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.016988 seconds.
-- Frame drawn at 0.032215 seconds.
-- Frame drawn at 0.049088 seconds.
-- Frame drawn at 0.066219 seconds.
-- 0.066219 seconds to render 5 frames.
-[25, 15]
-[1, 1]
-turn 1
+- Frame drawn at 0.017036 seconds.
+- Frame drawn at 0.031664 seconds.
+- Frame drawn at 0.048474 seconds.
+- Frame drawn at 0.065516 seconds.
+- 0.065516 seconds to render 5 frames.

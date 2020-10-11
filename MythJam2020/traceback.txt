@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Scale' <'Image' u'../images/char/CorgiKeyChain.png'> 450 650 True>:
-  File "game/script.rpy", line 414, in script
-    "(Reiki looks a bit surprised.)"
-IOError: Couldn't find file '../images/char/CorgiKeyChain.png'.
+While loading <'Scale' <'Image' u'../images/HeadmasterSilSilhouette.png'> 450 650 True>:
+  File "game/script.rpy", line 701, in script
+    rando "Welcome, how may I help you today?"
+IOError: Couldn't find file '../images/HeadmasterSilSilhouette.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 414, in script
-    "(Reiki looks a bit surprised.)"
+  File "game/script.rpy", line 701, in script
+    rando "Welcome, how may I help you today?"
   File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 708, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "/Applications/renpy-7.3.5-sdk/renpy/exports.py", line 1345, in say
@@ -73,9 +73,9 @@ Full traceback:
     surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
   File "/Applications/renpy-7.3.5-sdk/renpy/loader.py", line 576, in load
     raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file '../images/char/CorgiKeyChain.png'.
+IOError: Couldn't find file '../images/HeadmasterSilSilhouette.png'.
 
 Darwin-19.6.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
 MythJam2020 1.0
-Sun Oct 11 12:16:53 2020
+Sun Oct 11 12:27:01 2020
