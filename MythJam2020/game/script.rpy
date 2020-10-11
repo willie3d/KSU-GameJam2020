@@ -103,7 +103,7 @@ $ beauty = ("") #cool, cute, new
 
 label start:
 
-    default preferences.text_cps = 120
+    default preferences.text_cps = 80
 
     play music "../audio/mixkit-classique-63.mp3"
 
@@ -112,6 +112,7 @@ label start:
         "Please select your preferred pronouns..."
 
         "He, Him, His":
+            $ CapPronoun1 = "He"
             $ pronoun1 = "he"
             $ pronoun2 = "him"
             $ pronoun3 = "his"
@@ -122,6 +123,7 @@ label start:
             $ defaultName = "Geophery"
             image silhouette = im.Scale("../images/char/MaleProtag4Silhouette.png", 250, 250)
         "She, Her, Hers":
+            $ CapPronoun1 = "She"
             $ pronoun1 = "she"
             $ pronoun2 = "her"
             $ pronoun3 = "her"
@@ -132,6 +134,7 @@ label start:
             $ defaultName = "Bethany"
             image silhouette = im.Scale("../images/char/FemaleProtagSilhouette.png", 250, 250)
         "They, Them, Theirs":
+            $ CapPronoun1 = "They"
             $ pronoun1 = "they"
             $ pronoun2 = "them"
             $ pronoun3 = "their"
@@ -360,7 +363,7 @@ label start:
 
     prof "I'm sorry it's too late to leave now. You know how dangerous it would be if we get noticed. Now hurry along."
 
-    "(Whispered) \"Damn it, just follow my lead. We will leave at the end of the day!\""
+    k "(Whispered) \"Damn it, just follow my lead. We will leave at the end of the day!\""
 
     "(The professor leads you and Kimiko to the auditorium, where you notice students standing in *attention. Looking towards the stage, you see a beautiful lady standing at the podium looking down upon the students.)"
     "(Standing beside her, you notice what seems to be the Headmaster, who you can't see clearly as she stands in the darkness. As you stand in your place, the room begins to go quiet, and the students turn their attention towards the stage.)"
@@ -480,7 +483,7 @@ label start:
         "Hey, I didn't really have time to prepare for today so my friend-o here will tell you what classes would work best for me.":
             $fun=fun+1
             "(The person accepts your excuse and looks towards Kimiko.)"
-            "[pronoun1] will register for Introduction to Magical Beasts, Magical Beast Transformations, Introduction to the Human Race, and Introduction to Magical Abilities."
+            k "[CapPronoun1] will register for Introduction to Magical Beasts, Magical Beast Transformations, Introduction to the Human Race, and Introduction to Magical Abilities."
             randoTeach "Alright. And can we get your name?"
             mc "[player_name]"
             randoTeach "All right you are registered. Here is the schedule. Have a good semester!"
