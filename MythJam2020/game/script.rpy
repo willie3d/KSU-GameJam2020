@@ -704,7 +704,7 @@ label start:
     show headmaster at left
     show kimiko at rightPosition
 
-    rando "Welcome, how may I help you today?"
+    randoTeach "Welcome, how may I help you today?"
 
     k "Hi, my friend here is wondering if there are any housing options left available... possibly in the same unit as me?"
 
