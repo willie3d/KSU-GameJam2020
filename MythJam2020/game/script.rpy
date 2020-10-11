@@ -13,6 +13,7 @@ define r = Character("Reiki Omoi")
 define hm = Character("Headmaster")
 define prof = Character("Prof. Hayato")
 define unknown = Character("??????")
+define defaultName = ""
 define k_friendship = 0
 define k_romance = 0
 define k_hatred = 0
@@ -50,6 +51,7 @@ label start:
             $ pronoun4 = "his"
             $ pronoun5 = "himself"
             $ pronoun6 = "Sir"
+            $ defaultName = "Geophery"
         "She, Her, Hers":
             $ pronoun1 = "she"
             $ pronoun2 = "her"
@@ -57,6 +59,7 @@ label start:
             $ pronoun4 = "hers"
             $ pronoun5 = "herself"
             $ pronoun6 = "Miss"
+            $ defaultName = "Bethany"
         "They, Them, Theirs":
             $ pronoun1 = "they"
             $ pronoun2 = "them"
@@ -64,6 +67,7 @@ label start:
             $ pronoun4 = "theirs"
             $ pronoun5 = "themself"
             $ pronoun6 = "Comrade"
+            $ defaultName = "Komrade"
 
     # The phrase in the brackets is the text that the game will display to prompt
     # the player to enter the name they've chosen.
@@ -75,7 +79,7 @@ label start:
     #  If the player can't be bothered to choose a name, then we
     #  choose a suitable one for them:
     if player_name == "":
-        $ player_name="Shuji"
+        $ player_name= defaultName
 
     # These display lines of dialogue.
     "It's been almost a week since the situation with my father took place that changed my life forever.
@@ -170,10 +174,30 @@ label start:
     #Insert creak sound
     scene bedroomDay
     "Wait, when did I get back to my bedroom? And what was that noise?"
+    "(You get out of bed quickly and look out the window.)"
+    "(You see Kimiko standing outside and decide to get dressed quickly to see what she is doing.
+     You put a hoodie and glasses on and leave the house following Kimiko into the woods.)"
+    scene oldschool
 
+    "Why is Kimiko going into such a creepy school? Also since when was there a University this close to our home?"
+    "(You follow Kimiko through the school gate.)"
 
+    scene brightschool
 
+    "(Suddenly, a bright light fills the screen and the background changes to an beautiful school)"
+    "Oh! Kimiko is over there. I better hide before she sees me."
     # This ends the game.
+
+
+    "(You watch Kimiko talk to a male student, and as you attempt to get a closer look, you trip over a tree branch.)"
+    "(The male student points in your direction and Kimiko turns to look at you. Suddenly, she rushes to your side.)"
+
+    k "What in the world are you doing here!"
+
+
+
+
+
 
 
     call start2 from script2
