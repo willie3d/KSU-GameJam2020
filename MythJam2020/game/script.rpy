@@ -102,6 +102,8 @@ $ beauty = ("") #cool, cute, new
 
 label start:
 
+    default preferences.text_cps = 120
+
     play music "../audio/mixkit-classique-63.mp3"
 
     #this is how to make selections and stuff
