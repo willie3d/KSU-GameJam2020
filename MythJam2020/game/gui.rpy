@@ -85,7 +85,7 @@ define gui.title_text_size = 50
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
+define gui.main_menu_background = im.Scale("gui/main_menu.png",1280,720)
 define gui.game_menu_background = "gui/game_menu.png"
 
 
@@ -469,6 +469,3 @@ init python:
 
         gui.nvl_button_width = 1240
         gui.nvl_button_xpos = 20
-
-
-

@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("MythJam2020")
+define config.name = _("Adventures at the University of Amaterasu")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
